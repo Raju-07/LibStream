@@ -1,3 +1,5 @@
 LibStreamenv
 .pyc
 .env
+rough.py
+__pycache__
