@@ -36,3 +36,4 @@ class BookAssignModal(Base):
     index: Mapped[Integer] = mapped_column(Integer,autoincrement=True)
     user_id: Mapped[UUID] = mapped_column(UUID)
     
+    
