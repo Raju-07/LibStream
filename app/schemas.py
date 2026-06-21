@@ -1,4 +1,5 @@
 from pydantic import Field,EmailStr,BaseModel
+from datetime import date
 
 
 class Base(BaseModel):
@@ -25,4 +26,14 @@ class UserRegister(Base):
                           description="Password",
                           title="Password"
                           )
+    
+    class Books:
+        id: int
+        name: str
+        author: str
+        issued: int
+        total: int
+        category: str
+        location: str
+        added_at: date = date.today()
     
