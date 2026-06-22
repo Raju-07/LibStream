@@ -1,7 +1,10 @@
 from fastapi import FastAPI
 
 
-app = FastAPI(title="LibStream",description="This platform is design to serve the Library System")
+app = FastAPI(
+    title="LibStream",
+    description="This platform is design to serve the Library System",
+    version="1.0.0")
 
 @app.get("/")
 def homepage():
