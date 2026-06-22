@@ -12,6 +12,7 @@ class UserModal(Base):
 
     id: Mapped[uuid.UUID] = mapped_column(UUID,nullable=False,default= lambda: uuid.uuid4(),primary_key=True,index=True)
     name: Mapped[str] = mapped_column(String(50),nullable=False)
+    username: Mapped[str] = mapped_column(String(70),nullable=False,unique=True)
     email: Mapped[str] = mapped_column(String(100),unique=True,index=True,nullable=False)
     password: Mapped[str] = mapped_column(String,nullable=False)
     is_active: Mapped[bool] = mapped_column(Boolean,default=True,nullable=False)
@@ -22,6 +23,9 @@ class UserModal(Base):
         back_populates="user",
         cascade= "all,delete-orphan"
         )
+    
+    class config:
+        from_attributes = True
 
 
 class BooksModal(Base):
@@ -41,6 +45,9 @@ class BooksModal(Base):
     assignments: Mapped[list["BookAssignModal"]] = relationship(back_populates='book',
                                                             cascade="all, delete-orphans")
 
+    class config:
+        from_attributes = True
+
 class BookAssignModal(Base):
 
     __tablename__ = "book_assign"
@@ -58,3 +65,5 @@ class BookAssignModal(Base):
     user: Mapped["UserModal"] = relationship(back_populates='assignments')
     book: Mapped["BooksModal"] = relationship(back_populates='assignments')
     
+    class config:
+        from_attributes = True
