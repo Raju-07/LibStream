@@ -1,13 +1,15 @@
-from pydantic import Field,EmailStr,BaseModel
+from pydantic import Field,EmailStr,BaseModel,ConfigDict
 from datetime import date
 from typing import Optional
 
 
 class Base(BaseModel):
+    model_config = ConfigDict(from_attributes=True)
     pass
 
 class UserRegister(Base):
-    
+    model_config = ConfigDict(from_attributes=True)
+
     name: str = Field(...,
                       description="Full Name",
                       max_length=50,
