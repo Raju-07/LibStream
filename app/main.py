@@ -1,7 +1,7 @@
 from fastapi import FastAPI,Depends
 from sqlalchemy.orm import Session
 from app.core.security import settings
-from app.db.models import router as auth_router
+from app.db.auth import router as auth_router
 from app.api.dependencies import get_current_user
 
 app = FastAPI(

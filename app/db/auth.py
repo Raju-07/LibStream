@@ -43,5 +43,5 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = 
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail="Invalid username or password")
     
-    access_token = create_session_token(data={'username':user.username,'admin':user.is_admin})
+    access_token = create_session_token(data={'username':user.username,'admin':user.is_admin,"id":str(user.id),'email':user.email,'active':user.is_active})
     return {'access_token':access_token,'token_type':'bearer'}
