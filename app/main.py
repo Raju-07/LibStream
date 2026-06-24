@@ -1,10 +1,10 @@
-from fastapi import FastAPI,Depends
-
+from fastapi import FastAPI
+from .core.security import settings
 
 app = FastAPI(
     title="LibStream",
     description="This platform is design to serve the Library System",
-    version="1.0.0")
+    version=settings.version)
 
 @app.get("/")
 def homepage():
