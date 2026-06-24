@@ -1,6 +1,6 @@
 from fastapi import Depends,HTTPException,status
 from fastapi.security import OAuth2PasswordBearer
-from core.config import settings
+from app.core.config import settings
 import jwt
 
 
@@ -15,11 +15,11 @@ async def get_current_user(token: str = Depends(oauth_schema)) -> str:
 
     try:
         payload = jwt.decode(token,settings.secret_key,settings.algorithm)
-        userid = payload.get("sub")
-        if userid is None:
+        username = payload.get("username")
+        if username is None:
             raise credential_exception
     except jwt.PyJWTError:
         raise credential_exception
     
-    return userid
+    return username
 

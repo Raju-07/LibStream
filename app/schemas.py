@@ -1,5 +1,7 @@
-from pydantic import Field,EmailStr,BaseModel,ConfigDict
+from pydantic import Field, EmailStr, BaseModel, ConfigDict
 from typing import Optional
+from uuid import UUID
+import uuid
 
 
 class Base(BaseModel):
@@ -37,7 +39,6 @@ class Books(Base):
     location: Optional[str] = None
 
 class UserResponse(Base):
-    id: int
     name: str
     username: str
     email: str

@@ -2,7 +2,7 @@ from sqlalchemy import Integer,String,Date,UUID,DateTime,func,ForeignKey,Boolean
 from sqlalchemy.orm import mapped_column,Mapped,DeclarativeBase,relationship
 import uuid
 from datetime import datetime,timezone
-from db.session import engine
+from app.db.session import engine
 
 class Base(DeclarativeBase):
     pass

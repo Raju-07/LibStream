@@ -4,8 +4,8 @@ import bcrypt
 import jwt
 from datetime import datetime,timedelta,timezone
 from .config import settings
-from db.session import get_db
-from models import UserModal
+from app.db.session import get_db
+from app.models import UserModal
 
 def hash_password(password: str) -> str:
     plain_bytes = password.encode('utf-8')
@@ -23,7 +23,7 @@ def verify_password(plain_password: str, hashed_password: str) -> bool:
     
 def create_session_token(data: dict) -> str:
     to_encode = data.copy()
-    expire = datetime.now(timezone.utc) + timedelta(settings.token_expire_minutes)
+    expire = datetime.now(timezone.utc) + timedelta(minutes = settings.token_expire_minutes)
     to_encode.update({'exp':expire})
     return jwt.encode(to_encode,settings.secret_key,settings.algorithm)
 
