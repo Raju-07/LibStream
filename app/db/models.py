@@ -1,10 +1,13 @@
 from .session import get_db
-from fastapi import Depends,HTTPException,status
+from fastapi import Depends,HTTPException,status,APIRouter
 from sqlalchemy.orm import Session
-from schemas import UserRegister
+from schemas import UserRegister,UserResponse
 from ..models import UserModal
-from app import models
+from ..core.security import hash_password
 
+router = APIRouter(prefix='/auth',tags=["Authentication"])
+
+@router.post("/register",response_model=UserResponse,status_code=status.HTTP_201_CREATED)
 def createuser(user:UserRegister,db:Session = Depends(get_db)):
     username = db.query(UserModal).filter(UserModal.username == user.username).first()
     if username:
@@ -14,13 +17,13 @@ def createuser(user:UserRegister,db:Session = Depends(get_db)):
     if useremail:
         return HTTPException(status_code=status.HTTP_400_BAD_REQUEST,detail="Account already exists with that email.")
     
-    hash_password = hash_password(user.password)
+    hashed_password = hash_password(user.password)
 
     new_user = UserModal(
         name = user.name,
         username = user.username,
         email = user.email,
-        password = hash_password,
+        password = hashed_password,
     )
 
     db.add(new_user)
