@@ -2,7 +2,7 @@ from sqlalchemy import Integer,String,Date,UUID,DateTime,func,ForeignKey,Boolean
 from sqlalchemy.orm import mapped_column,Mapped,DeclarativeBase,relationship
 import uuid
 from datetime import datetime,timezone
-
+from .db import session
 
 class Base(DeclarativeBase):
     pass
@@ -43,7 +43,8 @@ class BooksModal(Base):
                                 default=datetime.now(timezone.utc))
 
     assignments: Mapped[list["BookAssignModal"]] = relationship(back_populates='book',
-                                                            cascade="all, delete-orphans")
+                                                    cascade='all,delete-orphan')
+    
 
     class config:
         from_attributes = True
@@ -67,3 +68,5 @@ class BookAssignModal(Base):
     
     class config:
         from_attributes = True
+
+Base.metadata.create_all(bind=session.engine)
