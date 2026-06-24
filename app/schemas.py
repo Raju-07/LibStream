@@ -1,5 +1,4 @@
 from pydantic import Field,EmailStr,BaseModel,ConfigDict
-from datetime import date
 from typing import Optional
 
 
@@ -36,4 +35,9 @@ class Books(Base):
     author: str = Field(...,description="Author of the Book")
     category: Optional[str] = None
     location: Optional[str] = None
-    
+
+class UserResponse(Base):
+    id: int
+    name: str
+    username: str
+    email: str
