@@ -1,12 +1,10 @@
 from pydantic import Field, EmailStr, BaseModel, ConfigDict
 from typing import Optional
-from uuid import UUID
 import uuid
 
 
 class Base(BaseModel):
     model_config = ConfigDict(from_attributes=True)
-    pass
 
 class UserRegister(Base):
     model_config = ConfigDict(from_attributes=True)
@@ -39,6 +37,7 @@ class Books(Base):
     location: Optional[str] = None
 
 class UserResponse(Base):
+    id: uuid.UUID
     name: str
     username: str
     email: str
