@@ -2,7 +2,7 @@ import os
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
-from ..core.config import settings
+from core.config import settings
 
 DB_URL = settings.db_url
 engine = create_engine(DB_URL)

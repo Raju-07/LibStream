@@ -2,7 +2,7 @@ from sqlalchemy import Integer,String,Date,UUID,DateTime,func,ForeignKey,Boolean
 from sqlalchemy.orm import mapped_column,Mapped,DeclarativeBase,relationship
 import uuid
 from datetime import datetime,timezone
-from .db import session
+from db.session import engine
 
 class Base(DeclarativeBase):
     pass
@@ -69,4 +69,4 @@ class BookAssignModal(Base):
     class config:
         from_attributes = True
 
-Base.metadata.create_all(bind=session.engine)
+Base.metadata.create_all(bind=engine)

@@ -4,8 +4,8 @@ import bcrypt
 import jwt
 from datetime import datetime,timedelta,timezone
 from .config import settings
-from ..db.session import get_db
-from ..models import UserModal
+from db.session import get_db
+from models import UserModal
 
 def hash_password(password: str) -> str:
     plain_bytes = password.encode('utf-8')

@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .core.security import settings
+from core.security import settings
 
 app = FastAPI(
     title="LibStream",
