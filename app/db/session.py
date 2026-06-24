@@ -2,11 +2,10 @@ import os
 from dotenv import load_dotenv
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from ..core.config import settings
 
-load_dotenv()
-db_url = "postgresql://postgres:12345678@localhost:5432/db"
-DB_URL = os.getenv("DB_URL")
-engine = create_engine(db_url)
+DB_URL = settings.db_url
+engine = create_engine(DB_URL)
 
 SessionLocal = sessionmaker(bind=engine,autocommit=False,expire_on_commit=False)
 
@@ -16,5 +15,3 @@ def get_db():
         yield db
     finally:
         db.close()
-
-
