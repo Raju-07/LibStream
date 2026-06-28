@@ -6,6 +6,8 @@ from datetime import datetime,timedelta,timezone
 from .config import settings
 from app.db.session import get_db
 from app.models import UserModal
+from app.api.dependencies import get_current_user
+from app.core.config import settings
 
 def hash_password(password: str) -> str:
     plain_bytes = password.encode('utf-8')
@@ -27,9 +29,3 @@ def create_session_token(data: dict) -> str:
     to_encode.update({'exp':expire})
     return jwt.encode(to_encode,settings.secret_key,settings.algorithm)
 
-def is_admin(user_id,db: Session = Depends(get_db))->bool:
-    admin = db.query(UserModal).filter(UserModal.id == user_id).first()
-    if admin:
-        return True
-    else:
-        return False
