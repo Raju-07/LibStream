@@ -23,3 +23,10 @@ async def get_current_user(token: str = Depends(oauth_schema)) -> str:
     
     return username
 
+async def current_user_admin(token: str = Depends(oauth_schema)):
+    payload = jwt.decode(token,settings.secret_key,settings.algorithm)
+    admin = payload.get('admin')
+    if admin:
+        return {'code':'','message':"you're elegible to perform this operation"}
+    else:
+        return {'code':'401','message':'Unauthorized Action'}
