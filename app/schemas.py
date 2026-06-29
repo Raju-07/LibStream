@@ -41,3 +41,11 @@ class UserResponse(Base):
     name: str
     username: str
     email: str
+
+class BookResponse(Base):
+    id: int
+    name: str
+    author: str
+    category: str
+    location: str
+    is_assigned: bool

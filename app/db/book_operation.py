@@ -3,6 +3,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import or_,and_
 from app.db.session import get_db
 from app.models import BooksModal
+from app.schemas import BookResponse
 router = APIRouter(prefix="/books",tags=["Book Operations"])
 
 
@@ -20,18 +21,12 @@ async def get_book_by_name(bookname: str, category:str = 'all' ,db: Session = De
     #                         detail="Nothing Found 404")
     return result
 
-@router.get("/search-by-id")
+@router.get("/search-by-id",response_model=BookResponse)
 async def get_book_by_id(id:int,db:Session = Depends(get_db)):
-    result = db.query(BooksModal).filter(BooksModal.id == id).first()
-    if not result:
+    result = db.query(BooksModal).filter(BooksModal.id == id)
+    if not result.count() > 0:
         raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail=f"Book Not Found with {id=} ")
-    else:
-        if result.is_assigned == True:        
-            return result
-        else:
-            raise HTTPException(
-                status_code=status.HTTP_306_RESERVED,
-                detail="Book is already in used")
+            status_code = status.HTTP_404_NOT_FOUND,
+            detail='Not Found 404')
+    return result.first()
 
