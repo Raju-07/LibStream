@@ -1,12 +1,8 @@
 from sqlalchemy.orm import Session
-from fastapi import Depends,HTTPException,status
 import bcrypt
 import jwt
 from datetime import datetime,timedelta,timezone
 from .config import settings
-from app.db.session import get_db
-from app.models import UserModal
-from app.api.dependencies import get_current_user
 from app.core.config import settings
 
 def hash_password(password: str) -> str:
