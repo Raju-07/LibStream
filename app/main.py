@@ -3,7 +3,7 @@ from sqlalchemy.orm import Session
 from app.core.security import settings
 from app.db.auth import router as auth_router
 from app.api.dependencies import get_current_user
-from app.crud import router as book_operation
+from app.db.book_operation import router as book_operation
 app = FastAPI(
     title="LibStream",
     description="This platform is design to serve the Library System",
