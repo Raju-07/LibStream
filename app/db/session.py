@@ -1,17 +1,31 @@
-import os
-from dotenv import load_dotenv
-from sqlalchemy import create_engine
-from sqlalchemy.orm import sessionmaker
+from typing import AsyncGenerator
+from sqlalchemy.ext.asyncio import create_async_engine, AsyncSession, async_sessionmaker
 from app.core.config import settings
 
+# Use async database URL
 DB_URL = settings.db_url
-engine = create_engine(DB_URL)
+# Example: "postgresql+asyncpg://user:password@localhost/dbname"
 
-SessionLocal = sessionmaker(bind=engine,autocommit=False,expire_on_commit=False)
+# Create async engine 
+engine = create_async_engine(
+    DB_URL,
+    echo=True,
+    future=True,
+    pool_pre_ping=True
+)
 
-def get_db():
-    db = SessionLocal()
-    try:
-        yield db
-    finally:
-        db.close()
+# Create async session factory
+AsyncSessionLocal = async_sessionmaker(
+    engine,
+    class_=AsyncSession,
+    expire_on_commit=False,
+    autocommit=False
+)
+
+# Correct async generator with proper type hint
+async def get_db() -> AsyncGenerator[AsyncSession, None]:
+    async with AsyncSessionLocal() as session:
+        try:
+            yield session
+        finally:
+            await session.close()
