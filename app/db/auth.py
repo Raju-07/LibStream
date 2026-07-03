@@ -6,8 +6,11 @@ from app.schemas import UserRegister,UserResponse
 from app.models import UserModal
 from app.core.security import hash_password,create_session_token,verify_password
 import uuid
+from datetime import datetime,timezone,timedelta
 
 router = APIRouter(prefix='/auth',tags=["Authentication"])
+# current datetime 
+now = datetime.now(timezone.utc)
 
 @router.post("/register",response_model=UserResponse,status_code=status.HTTP_201_CREATED)
 def createuser(user:UserRegister,db:Session = Depends(get_db)):
@@ -43,5 +46,11 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = 
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail="Invalid username or password")
     
-    access_token = create_session_token(data={'username':user.username,'admin':user.is_admin,"id":str(user.id),'email':user.email,'active':user.is_active})
+    access_token = create_session_token(
+        data={
+            'sub':str(user.id),
+            'iat':now,
+            'jti':str(uuid.uuid4()),
+            'type':'access'
+            })
     return {'access_token':access_token,'token_type':'bearer'}
