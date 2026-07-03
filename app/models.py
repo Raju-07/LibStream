@@ -60,7 +60,8 @@ class BookAssignModal(Base):
     book_id: Mapped[int] = mapped_column(ForeignKey('books.id'),nullable=False)
     expired_at: Mapped[datetime] = mapped_column(
                     DateTime(timezone=True),
-                    default=datetime.now(timezone.utc)+timedelta(days=10))
+                    default=datetime.now(timezone.utc)+timedelta(days=10),
+                    server_default= func.current_timestamp() + timedelta(days=10))
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True),
         default=lambda: datetime.now(timezone.utc),
