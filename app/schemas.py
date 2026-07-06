@@ -1,6 +1,7 @@
 from pydantic import Field, EmailStr, BaseModel, ConfigDict
 from typing import Optional
 import uuid
+from datetime import datetime
 
 
 class Base(BaseModel):
@@ -42,10 +43,23 @@ class UserResponse(Base):
     username: str
     email: str
 
-class BookResponse(Base):
+class BookRequest(Base):
     id: int
     name: str
     author: str
     category: str
     location: str
     is_assigned: bool
+
+class BookAssignRequest(Base):
+    user_id: uuid.UUID
+    book_id: int
+
+class BookResponse(Base):
+    id: int
+    name: str
+    author: str
+    category: str
+    is_assigned: bool
+    location: str
+    added_at: datetime

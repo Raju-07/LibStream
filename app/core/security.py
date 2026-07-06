@@ -1,4 +1,3 @@
-from sqlalchemy.orm import Session
 import bcrypt
 import jwt
 from datetime import datetime,timedelta,timezone

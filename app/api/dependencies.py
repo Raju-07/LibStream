@@ -5,7 +5,7 @@ from fastapi.security import OAuth2PasswordBearer
 from app.core.config import settings
 import jwt
 from app.models import UserModal
-from app.db.session import get_db
+from app.db.session import get_async_db
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
 
@@ -13,7 +13,7 @@ from sqlalchemy import select
 oauth_schema = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
 
 async def get_current_user(token: str = Depends(oauth_schema),
-                           db: AsyncSession = Depends(get_db)) -> UserModal:
+                           db: AsyncSession = Depends(get_async_db)) -> UserModal:
     
     credential_exception = HTTPException(
         status_code= status.HTTP_401_UNAUTHORIZED,

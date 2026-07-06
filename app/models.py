@@ -74,4 +74,3 @@ class BookAssignModal(Base):
     class config:
         from_attributes = True
 
-Base.metadata.create_all(bind=engine)

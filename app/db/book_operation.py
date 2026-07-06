@@ -1,53 +1,87 @@
+import uuid
+
 from fastapi import Depends,status,HTTPException,APIRouter
-from sqlalchemy.orm import Session
-from sqlalchemy import or_,and_
-from app.db.session import get_db
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import or_,and_,select,func,insert
+from app.db.session import get_async_db
 from app.models import BooksModal,UserModal,BookAssignModal
-from app.schemas import BookResponse
+from app.schemas import BookRequest,BookAssignRequest, UserResponse
 from app.api.dependencies import get_current_user
 
 
 router = APIRouter(prefix="/books",tags=["Book Operations"])
 
 @router.get("/search-by-name")
-async def get_book_by_name(bookname: str, category:str = 'all' ,db: Session = Depends(get_db)):
-    result = db.query(BooksModal).filter(BooksModal.name.ilike(f'%{bookname}%')).all()
+async def get_book_by_name(bookname: str,
+                        category:str = 'all' ,
+                        db:AsyncSession = Depends(get_async_db)):
+    query = select(BooksModal).where(BooksModal.name.ilike(f'%{bookname}%'))
     
     if category != 'all':
-        result = db.query(BooksModal).filter(
-            and_(BooksModal.name.ilike(f'%{bookname}%'),
-                 BooksModal.category == category)).all()
+        query = query.where(BooksModal.category.ilike(f'%{category}%'))
 
-    if not len(result) > 0:
+    result = await db.execute(query)
+    books = result.scalars().all()
+
+    if not len(books) > 0:
         raise HTTPException(status_code = status.HTTP_404_NOT_FOUND,
                             detail=f"Nothing Found with Name {bookname}")
-    return result
+    return books
 
-@router.get("/search-by-id",response_model=BookResponse)
-async def get_book_by_id(id:int,db:Session = Depends(get_db)):
-    result = db.query(BooksModal).filter(BooksModal.id == id)
-    if not result.count() > 0:
+@router.get("/search-by-id/{id}",response_model=BookRequest)
+async def get_book_by_id(id:int, db: AsyncSession = Depends(get_async_db)):
+    conditions = [BooksModal.id == id]
+    count_result = await db.execute(
+        select(func.count(BooksModal.id)).where(*conditions))
+    count = count_result.scalar()
+
+    if count == 0:
         raise HTTPException(
-            status_code = status.HTTP_404_NOT_FOUND,
-            detail='Not Found 404')
-    return result.first()
+            status.HTTP_404_NOT_FOUND,
+            f"No Book Found with {id= }"
+        )
+    books = await db.execute(select(BooksModal).where(and_(*conditions)))
+
+    return books.scalar_one_or_none()
 
 @router.patch("/take-book/{id}")
-async def take_book(id: int,current_user: UserModal= Depends(get_current_user),
-                   db: Session = Depends(get_db)):
+async def take_book(id: int,current_user: UserResponse= Depends(get_current_user),
+                   db: AsyncSession = Depends(get_async_db)):
     
-    book = db.query(BooksModal).filter(
-        and_(BooksModal.id == id,BooksModal.is_assigned == False)).first()
-    
+    book = await db.execute(select(BooksModal).where(BooksModal.id == id))
+    book = book.scalar_one_or_none()
     if  not book:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
-                            detail="Book isn't available")
+                            detail="Book isn't Found")
+    if book.is_assigned:
+        raise HTTPException(status.HTTP_404_NOT_FOUND,"Book is already taken")
     
-    book_assigned = BookAssignModal(
-        user_id = current_user.id,
-        book_id = book.id,
-
+    book.is_assigned = True
+    await db.commit()
+    
+    book_assinged = BookAssignModal(
+        user_id= current_user.id,
+        book_id=book.id
     )
+    db.add(book_assinged)
+    await db.commit()
+
+    return "Book assigned to you"
+
+@router.get('/available-books')
+async def get_avail_books(db: AsyncSession = Depends(get_async_db)):
+    condition = [BooksModal.is_assigned == False]
+    query = await db.execute(select(func.count(BooksModal.id)).where(and_(*condition)))
+    count = query.scalar()
+
+    if count == 0:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="There isn't any book available yet"
+        )
     
-    return book
+    books = await db.execute(select(BooksModal).where(and_(*condition)))
+    return books.scalars().all()
+
+
 

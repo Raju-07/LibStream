@@ -1,7 +1,8 @@
-from .session import get_db
+from .session import get_async_db
 from fastapi import Depends,HTTPException,status,APIRouter
 from fastapi.security import OAuth2PasswordRequestForm
-from sqlalchemy.orm import Session
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import select
 from app.schemas import UserRegister,UserResponse
 from app.models import UserModal
 from app.core.security import hash_password,create_session_token,verify_password
@@ -13,13 +14,16 @@ router = APIRouter(prefix='/auth',tags=["Authentication"])
 now = datetime.now(timezone.utc)
 
 @router.post("/register",response_model=UserResponse,status_code=status.HTTP_201_CREATED)
-def createuser(user:UserRegister,db:Session = Depends(get_db)):
-    username = db.query(UserModal).filter(UserModal.username == user.username).first()
-    if username:
-        return HTTPException(status_code=status.HTTP_400_BAD_REQUEST,detail="User already exists with that username")
+async def createuser(user:UserRegister,db:AsyncSession = Depends(get_async_db)):
+    user_name = await db.execute(select(UserModal).where(UserModal.username == user.username))
+    user_name.scalar_one_or_none()
+    if user_name:
+        return HTTPException(status.HTTP_400_BAD_REQUEST,
+                             "User already exists with that username")
     
-    useremail = db.query(UserModal).filter(UserModal.email == user.email).first()
-    if useremail:
+    user_email = await db.execute(select(UserModal).where(UserModal.email == user.email))
+    user_email.scalar_one_or_none()
+    if user_email:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,detail="Account already exists with that email.")
     
     hashed_password = hash_password(user.password)
@@ -33,15 +37,15 @@ def createuser(user:UserRegister,db:Session = Depends(get_db)):
     )
 
     db.add(new_user)
-    db.commit()
-    db.refresh(new_user)
+    await db.commit()
+    await db.refresh(new_user)
 
     return new_user
 
 @router.post("/login/")
-async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: Session = Depends(get_db)):
-    user = db.query(UserModal).filter(UserModal.username == form_data.username).first()
-
+async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: AsyncSession = Depends(get_async_db)):
+    user = await db.execute(select(UserModal).where(UserModal.username == form_data.username))
+    user = user.scalar_one_or_none()
     if not user or not verify_password(form_data.password, user.password):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail="Invalid username or password")
