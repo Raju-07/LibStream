@@ -14,22 +14,33 @@ router = APIRouter(prefix='/auth',tags=["Authentication"])
 now = datetime.now(timezone.utc)
 
 @router.post("/register",response_model=UserResponse,status_code=status.HTTP_201_CREATED)
-async def createuser(user:UserRegister,db:AsyncSession = Depends(get_async_db)):
-    user_name = await db.execute(select(UserModal).where(UserModal.username == user.username))
-    user_name.scalar_one_or_none()
-    if user_name:
-        return HTTPException(status.HTTP_400_BAD_REQUEST,
-                             "User already exists with that username")
-    
-    user_email = await db.execute(select(UserModal).where(UserModal.email == user.email))
-    user_email.scalar_one_or_none()
-    if user_email:
-        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST,detail="Account already exists with that email.")
-    
+async def createuser(
+    user:UserRegister,
+    db:AsyncSession = Depends(get_async_db)):
+
+    existing_user = (await db.execute(
+        select(UserModal).where(UserModal.username == user.username)
+    )).scalar_one_or_none()
+
+    if existing_user:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="User already exists with that username"
+        )
+
+    existing_email = (await db.execute(
+        select(UserModal).where(UserModal.email == user.email)
+    )).scalar_one_or_none()
+
+    if existing_email:
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Account already exists with that email."
+        )
+
     hashed_password = hash_password(user.password)
-    id = uuid.uuid4()
     new_user = UserModal(
-        id = id,
+        id=uuid.uuid4(),
         name=user.name,
         username=user.username,
         email=user.email,
