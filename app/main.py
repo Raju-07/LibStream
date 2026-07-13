@@ -4,9 +4,10 @@ from app.core.database import init_db,close_db
 from app.core.security import settings
 from app.db.auth import router as auth_router
 from app.api.dependencies import get_current_user
-from app.db.book_operation import router as book_operation
+from app.db.books_user_operation import router as book_operation
 from contextlib import asynccontextmanager
 from app.schemas import UserResponse
+from app.crud import router as admin_crud_route
 # from rough import router as test_router
 
 @asynccontextmanager
@@ -26,6 +27,7 @@ app = FastAPI(lifespan=lifespan ,
 
 app.include_router(auth_router,prefix="/api")
 app.include_router(book_operation,prefix="/operation")
+app.include_router(admin_crud_route)
 # app.include_router(test_router,prefix = "/test")
 
 @app.get("/")
