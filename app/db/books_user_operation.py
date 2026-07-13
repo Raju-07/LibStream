@@ -45,29 +45,6 @@ async def get_book_by_id(id:int, db: AsyncSession = Depends(get_async_db)):
 
     return books
 
-@router.patch("/take-book/{id}")
-async def take_book(id: int,current_user: UserResponse= Depends(get_current_user),
-                   db: AsyncSession = Depends(get_async_db)):
-    
-    book = await db.execute(select(BooksModal).where(BooksModal.id == id))
-    book = book.scalar_one_or_none()
-    if  not book:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
-                            detail="Book isn't Found")
-    if book.is_assigned:
-        raise HTTPException(status.HTTP_404_NOT_FOUND,"Book is already taken")
-    
-    book.is_assigned = True
-    await db.commit()
-    
-    book_assinged = BookAssignModal(
-        user_id= current_user.id,
-        book_id=book.id
-    )
-    db.add(book_assinged)
-    await db.commit()
-
-    return "Book assigned to you"
 
 @router.get('/available-books')
 async def get_avail_books(db: AsyncSession = Depends(get_async_db)):
@@ -83,6 +60,8 @@ async def get_avail_books(db: AsyncSession = Depends(get_async_db)):
     
     books = await db.execute(select(BooksModal).where(and_(*condition)))
     return books.scalars().all()
+
+
 
 
 
