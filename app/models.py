@@ -1,4 +1,4 @@
-from sqlalchemy import Integer,String,Date,UUID,DateTime,func,ForeignKey,Boolean,cast
+from sqlalchemy import Integer,String,Date,UUID,DateTime,func,ForeignKey,Boolean,cast,extract
 from sqlalchemy.orm import mapped_column,Mapped,DeclarativeBase,relationship,column_property
 import uuid
 from datetime import datetime,timezone,timedelta
@@ -66,7 +66,10 @@ class BookAssignModal(Base):
         DateTime(timezone=True),
         default=lambda: datetime.now(timezone.utc),
         server_default=func.current_timestamp())
-    days_left : Mapped[int] = column_property(cast(expired_at - func.current_timestamp,Integer))
+    is_return: Mapped[bool] = mapped_column(Boolean,default=False,nullable=False)
+    
+    # days_left : Mapped[int] = column_property(
+        # cast(extract('epoch',expired_at - func.current_timestamp)/86400 ,Integer))
     
     user: Mapped["UserModal"] = relationship(back_populates='assignments')
     book: Mapped["BooksModal"] = relationship(back_populates='assignments')
