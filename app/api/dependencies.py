@@ -1,5 +1,5 @@
 import uuid
-
+from sqlalchemy.exc import NoResultFound,MultipleResultsFound
 from fastapi import Depends,HTTPException,status
 from fastapi.security import OAuth2PasswordBearer
 from app.core.config import settings
@@ -8,6 +8,7 @@ from app.models import UserModal
 from app.db.session import get_async_db
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import select
+from app.models import BooksModal
 
 
 oauth_schema = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
@@ -64,4 +65,24 @@ async def get_admin_user(
             status.HTTP_403_FORBIDDEN,
             "Admin Privileges Required")
     return current_user
+
+# function to check book existance 
+async def is_book_exists(id: int, db: AsyncSession = Depends(get_async_db))-> int:
+    try:
+        stmt = select(BooksModal.id).where(BooksModal.id == id)
+        result = await db.execute(stmt)
+        id = result.scalar_one()
+
+        return id
+    except NoResultFound:
+        raise HTTPException(
+            status.HTTP_404_NOT_FOUND,
+            f"Book not found with id: {id}"
+        )
     
+    except Exception as e:
+        raise HTTPException(
+            status.HTTP_500_INTERNAL_SERVER_ERROR,
+            f"Error while checking books {str(e)}"
+        )
+
