@@ -40,9 +40,10 @@ async def get_book_by_id(id:int, db: AsyncSession = Depends(get_async_db)):
             status.HTTP_404_NOT_FOUND,
             f"No Book Found with {id= }"
         )
-    books = await db.execute(select(BooksModal).where(and_(*conditions)))
+    results = await db.execute(select(BooksModal).where(and_(*conditions)))
+    books = results.scalar_one_or_none()
 
-    return books.scalar_one_or_none()
+    return books
 
 @router.patch("/take-book/{id}")
 async def take_book(id: int,current_user: UserResponse= Depends(get_current_user),
