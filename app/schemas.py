@@ -44,12 +44,11 @@ class UserResponse(Base):
     email: str
 
 class BookRequest(Base):
-    id: int
     name: str
     author: str
     category: str
     location: str
-    is_assigned: bool
+    is_assigned: bool = False
 
 class BookAssignRequest(Base):
     user_id: uuid.UUID
