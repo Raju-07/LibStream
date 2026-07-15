@@ -13,7 +13,7 @@ router = APIRouter(prefix='/admin',tags=["Admin Operations"])
 @router.post('/add-book')
 async def add_book(
     book:AddBookRequest,
-    admin_user : AsyncSession = Depends(admin_required),
+    _ : None = Depends(admin_required),
     db: AsyncSession = Depends(get_async_db)
     ):
     try:
@@ -30,7 +30,7 @@ async def add_book(
 @router.delete("/delete-book/{id}")
 async def delete_book_by_id(id:int,
                             db: AsyncSession = Depends(get_async_db),
-                            admin: AsyncSession = Depends(admin_required)):
+                            _: None = Depends(admin_required)):
     
     try:
         await db.execute(delete(BooksModal).where(BooksModal.id == id))
