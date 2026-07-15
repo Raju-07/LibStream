@@ -43,21 +43,44 @@ class UserResponse(Base):
     username: str
     email: str
 
-class BookRequest(Base):
+class AddBookRequest(Base):
     name: str
     author: str
     category: str
     location: str
     is_assigned: bool = False
 
+class UpdateBookRequest(Base):
+    name: Optional[str] = Field(default="No Change, Remove this Column")
+    author: Optional[str] = Field(default="No Change, Remove this Column")
+    category: Optional[str] = Field(default="No Change, Remove this Column")
+    location: Optional[str] = Field(default="No Change, Remove this Column")
+
 class BookAssignRequest(Base):
     user_id: uuid.UUID
     book_id: int
 
-class BookResponse(Base):
+class ViewBookResponse(Base):
     id: int
     name: str
     author: str
     category: str
     is_assigned: bool
     location: str
+
+
+# schema for requesting the book
+class BookRequest(Base):
+    book_name : str = Field(...,max_length=100,description="Book Name")
+    author: str = Field(default="Not Known",max_length=100,description="Book Description")
+    edition: Optional[str]
+    description: Optional[str]
+
+# schema for Responsing the Requested book
+class BookResponse(Base):
+    id: int
+    book_name: str
+    author: str
+    edition: str
+    description: str
+    status: Optional[str]
