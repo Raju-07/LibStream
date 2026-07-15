@@ -5,7 +5,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy import or_,and_,select,func,insert
 from app.db.session import get_async_db
 from app.models import BooksModal,UserModal,BookAssignModal
-from app.schemas import BookRequest,BookAssignRequest, UserResponse,BookResponse
+from app.schemas import BookRequest,BookAssignRequest, UserResponse,ViewBookResponse
 from app.api.dependencies import get_current_user
 
 
@@ -28,7 +28,7 @@ async def get_book_by_name(bookname: str,
                             detail=f"Nothing Found with Name {bookname}")
     return books
 
-@router.get("/search-by-id/{id}",response_model=BookResponse)
+@router.get("/search-by-id/{id}",response_model=ViewBookResponse)
 async def get_book_by_id(id:int, db: AsyncSession = Depends(get_async_db)):
     conditions = [BooksModal.id == id]
     count_result = await db.execute(
