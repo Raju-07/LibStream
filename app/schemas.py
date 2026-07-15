@@ -61,4 +61,3 @@ class BookResponse(Base):
     category: str
     is_assigned: bool
     location: str
-    added_at: datetime
