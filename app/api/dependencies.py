@@ -1,32 +1,88 @@
+import uuid
+from sqlalchemy.exc import NoResultFound,MultipleResultsFound
 from fastapi import Depends,HTTPException,status
 from fastapi.security import OAuth2PasswordBearer
 from app.core.config import settings
 import jwt
+from app.models import UserModal
+from app.db.session import get_async_db
+from sqlalchemy.ext.asyncio import AsyncSession
+from sqlalchemy import select
+from app.models import BooksModal
 
 
 oauth_schema = OAuth2PasswordBearer(tokenUrl="/api/auth/login")
 
-async def get_current_user(token: str = Depends(oauth_schema)) -> str:
+async def get_current_user(token: str = Depends(oauth_schema),
+                    db: AsyncSession = Depends(get_async_db)) -> UserModal:
+    
     credential_exception = HTTPException(
         status_code= status.HTTP_401_UNAUTHORIZED,
         detail='could not validate credential',
         headers={"WWW-AUTHENTICATE":"bearer"}
     )
-
     try:
         payload = jwt.decode(token,settings.secret_key,settings.algorithm)
-        username = payload.get("username")
-        if username is None:
+        user_id = payload.get("sub")
+        if user_id is None:
             raise credential_exception
+        
+    except jwt.ExpiredSignatureError:
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED,
+                            "Token has Expired")
+    
     except jwt.PyJWTError:
         raise credential_exception
     
-    return username
+    try:
+        user_id = uuid.UUID(user_id)
+    except ValueError:
+        raise credential_exception
 
-async def current_user_admin(token: str = Depends(oauth_schema)):
-    payload = jwt.decode(token,settings.secret_key,settings.algorithm)
-    admin = payload.get('admin')
-    if admin:
-        return {'code':'','message':"you're elegible to perform this operation"}
-    else:
-        return {'code':'401','message':'Unauthorized Action'}
+    result = await db.execute(
+        select(UserModal).where(
+            UserModal.id == user_id))
+    user = result.scalar_one_or_none()
+
+    if user is None or not user.is_active:
+        raise credential_exception
+    
+    return user
+
+
+async def admin_required(
+        current_user : UserModal = Depends(get_current_user)) -> None:
+    if not current_user.is_admin:
+        raise HTTPException(
+            status.HTTP_403_FORBIDDEN,
+            "Admin Privileges Required")
+    
+
+async def get_admin_user(
+        current_user: UserModal= Depends(get_current_user)) -> UserModal:
+    if not current_user.is_admin:
+        raise HTTPException(
+            status.HTTP_403_FORBIDDEN,
+            "Admin Privileges Required")
+    return current_user
+
+# function to check book existance 
+async def is_book_exists(id: int, db: AsyncSession = Depends(get_async_db))-> int:
+    try:
+        stmt = select(BooksModal.id).where(BooksModal.id == id)
+        result = await db.execute(stmt)
+        id = result.scalar_one()
+
+        return id
+    except NoResultFound:
+        raise HTTPException(
+            status.HTTP_404_NOT_FOUND,
+            f"Book not found with id: {id}"
+        )
+    
+    except Exception as e:
+        raise HTTPException(
+            status.HTTP_500_INTERNAL_SERVER_ERROR,
+            f"Error while checking books {str(e)}"
+        )
+
