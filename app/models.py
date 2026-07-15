@@ -3,6 +3,8 @@ from sqlalchemy.orm import mapped_column,Mapped,DeclarativeBase,relationship,col
 import uuid
 from datetime import datetime,timezone,timedelta
 from app.db.session import engine
+from sqlalchemy.types import Enum as SQlEnum 
+from enum import Enum  
 
 class Base(DeclarativeBase):
     pass
@@ -24,6 +26,11 @@ class UserModal(Base):
         cascade= "all,delete-orphan"
         )
     
+    book_requests: Mapped[list["BookRequest"]] = relationship(
+        back_populates='requested_by_user',
+        cascade="all,delete-orphan"
+    )
+
     class config:
         from_attributes = True
 
@@ -75,5 +82,38 @@ class BookAssignModal(Base):
     book: Mapped["BooksModal"] = relationship(back_populates='assignments')
     
     class config:
-        from_attributes = True
+        from_attributes = True 
 
+# Enum class for Book Request status 
+class BookRequestStatus(str,Enum):
+    PENDING = "pending"
+    REJECT = "rejected" 
+    APPROVED = "approved"
+    ORDERED = "ordered"
+    COMPLETED = "completed"
+
+# New Book Request
+class BookRequest(Base):
+
+    __tablename__ = "book_requests"
+
+    id: Mapped[int] = mapped_column(Integer,index=True,autoincrement=True,
+                                    primary_key=True,nullable=False,)
+    name: Mapped[str] = mapped_column(String(100),nullable=False)
+    author: Mapped[str] = mapped_column(String(50))
+    edition: Mapped[str] = mapped_column(String(15))
+    description: Mapped[str] = mapped_column(String(255))
+    requrest_by: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True),ForeignKey('users.id'),nullable=False)
+
+    status: Mapped[BookRequestStatus] = mapped_column(SQlEnum(BookRequestStatus),
+                                        default=BookRequestStatus.PENDING,nullable=False)
+    
+    created_at: Mapped[datetime] = mapped_column(DateTime,
+                                    default=datetime.now(timezone.utc),
+                                    server_default=func.current_timestamp())
+    
+    requested_by_user: Mapped["UserModal"] = relationship(back_populates='book_requests')
+    
+    class config:
+        from_attributes = True
+    
