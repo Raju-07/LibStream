@@ -29,6 +29,14 @@ class UserRegister(Base):
                           title="Password",
                           )
     
+class AdminUserResponse(BaseModel):
+    id: uuid.UUID
+    name: str
+    username: str
+    email: str
+    is_active: bool
+    is_admin: bool
+    
 class Books(Base):
     id: int = Field(...,description="Book id")
     name: str = Field(...,description="Book Name")
