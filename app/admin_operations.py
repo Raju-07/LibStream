@@ -203,7 +203,7 @@ async def create_admin(user: UserRegister, db: AsyncSession = Depends(get_async_
         
         return {
             'code':200,
-            'message':"User with admin Previleges created",
+            'message':"User created with admin previleges.",
             'user':{
                 'id':admin_user.id,
                 'username':admin_user.username,
