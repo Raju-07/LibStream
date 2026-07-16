@@ -1,11 +1,11 @@
 from fastapi import HTTPException,status,APIRouter,Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.exc import NoResultFound
-from sqlalchemy import select,update,and_,or_
+from sqlalchemy import select,update,and_,or_,insert
 from app.db.session import get_async_db
 from app.api.dependencies import get_current_user,is_book_exists
-from app.models import BookAssignModal,UserModal,BooksModal
-from app.schemas import BookResponse,UserResponse
+from app.models import BookAssignModal,UserModal,BooksModal,BookRequestModal
+from app.schemas import BookResponse,UserResponse,BookRequest
 
 router = APIRouter(prefix='/user',tags=["Users Operation"])
 
@@ -117,3 +117,49 @@ async def take_book(id: int = Depends(is_book_exists),current_user: UserResponse
     except Exception as e:
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
                             f"Error occur while book assigning: {e}")
+
+
+# Request For new Book
+@router.post("/requrest-new-book",status_code=status.HTTP_201_CREATED)
+async def request_new_book(new_book: BookRequest,user: UserModal = Depends(get_current_user),db: AsyncSession = Depends(get_async_db)):
+    try:
+        book = BookRequestModal(**new_book.model_dump())
+        book.request_by = user.id
+        db.add(book)
+        await db.commit()
+        await db.refresh(book)
+
+        return book
+    except Exception as e:
+        raise HTTPException(
+            status.HTTP_500_INTERNAL_SERVER_ERROR,
+            f"Error while Requesting new Book: {str(e)}"
+        )
+
+# Retrieving the books i'm requested for
+@router.get("/my-requested-books",status_code=status.HTTP_200_OK)
+async def my_requested_books(user: UserModal = Depends(get_current_user),db: AsyncSession = Depends(get_async_db)):
+    try:
+        result = await db.execute(select(BookRequestModal).where(BookRequestModal.request_by == user.id))
+        books = result.scalars().all()
+        if not books:
+            raise HTTPException(
+                status.HTTP_404_NOT_FOUND,
+                "No Books Requested"
+            )
+        
+        return {
+            'code':200,
+            'message':"Requested Books",
+            'books': books
+        }
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        raise HTTPException(
+            status.HTTP_500_INTERNAL_SERVER_ERROR,
+            f"Error while retrieving my requested books: {str(e)}"
+        )
+    
