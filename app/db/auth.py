@@ -57,6 +57,10 @@ async def createuser(
 async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: AsyncSession = Depends(get_async_db)):
     user = await db.execute(select(UserModal).where(UserModal.username == form_data.username))
     user = user.scalar_one_or_none()
+    if not user.is_active:
+        raise HTTPException(status.HTTP_401_UNAUTHORIZED,
+                            "You're bann from using this application. Contact Admin 'admin123@libstream.com' for more information")
+    
     if not user or not verify_password(form_data.password, user.password):
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail="Invalid username or password")
