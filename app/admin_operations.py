@@ -2,10 +2,11 @@ from app.api.dependencies import admin_required,is_book_exists
 from sqlalchemy import select,and_,delete
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import Depends,APIRouter,HTTPException,status
-from app.schemas import AddBookRequest,UpdateBookRequest
+from app.schemas import AddBookRequest,UpdateBookRequest,UserRegister,UserResponse
 from app.db.session import get_async_db
 from app.models import BooksModal,UserModal
 from app.db.books_user_operation import get_book_by_id
+from app.db.auth import createuser
 
 router = APIRouter(prefix='/admin',tags=["Admin Operations"])
 
@@ -167,3 +168,52 @@ async def unban_user(username: str, _ : None = Depends(admin_required),
         await db.rollback()
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
                             f"Error while Unbanning user: {e}")
+
+# Deleting user
+@router.delete("/delete-user/{username}",status_code = status.HTTP_200_OK)
+async def delete_user(username:str,db: AsyncSession = Depends(get_async_db),_:None=Depends(admin_required)):
+    try:
+        result = await db.execute(select(UserModal).where(UserModal.username == username))
+        user = result.scalar_one_or_none()
+
+        if not user:
+            raise HTTPException(status.HTTP_404_NOT_FOUND,
+                    f"user '{username}' not found to delete.")
+        
+        await db.delete(user)
+        await db.commit()
+        return {
+            'code':200,
+            'message': f"User {username} Account Deleted."
+        }
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
+                            f"Error while deleting user: {e}")
+
+#created new user (reusing existing function to create new user)
+@router.post("/create-admin-user",status_code=status.HTTP_201_CREATED)
+async def create_admin(user: UserRegister, db: AsyncSession = Depends(get_async_db), _ : None = Depends(admin_required)):
+    try:
+        admin_user = await createuser(user, db)
+        admin_user.is_admin = True
+        await db.commit()
+        
+        return {
+            'code':200,
+            'message':"User with admin Previleges created",
+            'user':{
+                'id':admin_user.id,
+                'username':admin_user.username,
+                'is_admin': admin_user.is_admin
+            }
+        }
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
+                            f"Error while creating admin user {e}")
+
