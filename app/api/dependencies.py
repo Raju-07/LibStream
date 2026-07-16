@@ -29,7 +29,7 @@ async def get_current_user(token: str = Depends(oauth_schema),
         
     except jwt.ExpiredSignatureError:
         raise HTTPException(status.HTTP_401_UNAUTHORIZED,
-                            "Token has Expired")
+                            "Token has Expired. Re-login")
     
     except jwt.PyJWTError:
         raise credential_exception

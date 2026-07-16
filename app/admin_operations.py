@@ -22,8 +22,6 @@ async def add_book(
         await db.refresh(new_book)
     except:
         await db.rollback()
-    finally:
-        await db.close()
 
     return new_book
 
@@ -45,8 +43,7 @@ async def delete_book_by_id(id:int = Depends(get_book_by_id),
             status_code=status.HTTP_400_BAD_REQUEST,
             detail=f"Deletation Failed due to {e}"
         )
-    finally:
-        await db.close()
+
     
 
 @router.patch("/update-book/{id}",status_code=status.HTTP_200_OK)
@@ -76,8 +73,6 @@ async def update_book(book: UpdateBookRequest ,id: int = Depends(is_book_exists)
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
                             f"Error while updating Book : {str(e)}")
     
-    finally:
-        await db.close()
     
 
 # Endpoint to ban User's
@@ -120,8 +115,7 @@ async def ban_user(username: str,_ : None = Depends(admin_required),
         await db.rollback()
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
                             f"Error while banning user: {e}")
-    finally:
-        await db.close()
+
     
 # for unbanning the user
 
@@ -173,5 +167,3 @@ async def unban_user(username: str, _ : None = Depends(admin_required),
         await db.rollback()
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
                             f"Error while Unbanning user: {e}")
-    finally:
-        await db.close()

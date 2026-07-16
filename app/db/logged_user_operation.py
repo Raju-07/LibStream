@@ -90,27 +90,30 @@ async def return_book(id:int = Depends(is_book_exists), db: AsyncSession = Depen
 @router.patch("/take-book/{id}",status_code=status.HTTP_200_OK)
 async def take_book(id: int = Depends(is_book_exists),current_user: UserResponse= Depends(get_current_user),
                    db: AsyncSession = Depends(get_async_db)):
-    
-    book = await db.execute(select(BooksModal).where(BooksModal.id == id))
-    book = book.scalar_one_or_none()
-    if  not book:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
-                            detail="Book isn't Found")
-    if book.is_assigned:
-        raise HTTPException(status.HTTP_404_NOT_FOUND,"Book is already taken")
-    
-    book.is_assigned = True
-    await db.commit()
-    
-    book_assinged = BookAssignModal(
-        user_id= current_user.id,
-        book_id=book.id
-    )
-    db.add(book_assinged)
-    await db.commit()
+    try:
+        book = await db.execute(select(BooksModal).where(BooksModal.id == id))
+        book = book.scalar_one_or_none()
+        if  not book:
+            raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
+                                detail="Book isn't Found")
+        if book.is_assigned:
+            raise HTTPException(status.HTTP_404_NOT_FOUND,"Book is already taken")
+        
+        book.is_assigned = True
+        await db.commit()
+        
+        book_assinged = BookAssignModal(
+            user_id= current_user.id,
+            book_id=book.id
+        )
+        db.add(book_assinged)
+        await db.commit()
 
-    return {
-        'code':200,
-        'message':"Book assigned to you",
-        "book":book
-    }
+        return {
+            'code':200,
+            'message':"Book assigned to you",
+            "book":book
+        }
+    except Exception as e:
+        raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
+                            f"Error occur while book assigning: {e}")

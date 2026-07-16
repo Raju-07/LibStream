@@ -7,7 +7,7 @@ from app.api.dependencies import get_current_user
 from app.db.books_user_operation import router as book_operation
 from contextlib import asynccontextmanager
 from app.schemas import UserResponse
-from app.crud import router as admin_crud_route
+from app.admin_operations import router as admin_crud_route
 from app.db.logged_user_operation import router as user_router
 # from rough import router as test_router
 
