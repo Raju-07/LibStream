@@ -2,7 +2,7 @@ from app.api.dependencies import admin_required,is_book_exists
 from sqlalchemy import select,and_,delete
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import Depends,APIRouter,HTTPException,status
-from app.schemas import AddBookRequest,UpdateBookRequest,UserRegister,UserResponse
+from app.schemas import AddBookRequest,UpdateBookRequest,UserRegister,AdminUserResponse
 from app.db.session import get_async_db
 from app.models import BooksModal,UserModal
 from app.db.books_user_operation import get_book_by_id
@@ -217,3 +217,25 @@ async def create_admin(user: UserRegister, db: AsyncSession = Depends(get_async_
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
                             f"Error while creating admin user {e}")
 
+
+# retrieve all user
+@router.get("/get-all-user",status_code=status.HTTP_200_OK,response_model=list[AdminUserResponse])
+async def retrieve_all_user(_:None = Depends(admin_required),db: AsyncSession = Depends(get_async_db)):
+    try:
+        result = await db.execute(select(UserModal.name,UserModal.id,UserModal.username,UserModal.email,UserModal.is_active,UserModal.is_admin))
+        users = result.mappings().all()
+
+        if not users:
+            raise HTTPException(status.HTTP_404_NOT_FOUND,
+                                "No users found")
+
+        return users
+    
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        raise HTTPException(
+            status.HTTP_500_INTERNAL_SERVER_ERROR,
+            f"Error while Retrieving users: {e}"
+        )
