@@ -4,7 +4,7 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import Depends,APIRouter,HTTPException,status
 from app.schemas import AddBookRequest,UpdateBookRequest,UserRegister,AdminUserResponse
 from app.db.session import get_async_db
-from app.models import BooksModal,UserModal
+from app.models import BooksModal,UserModal,BookRequestModal,BookRequestStatus
 from app.db.books_user_operation import get_book_by_id
 from app.db.auth import createuser
 
@@ -266,4 +266,59 @@ async def get_ban_user(_:None = Depends(admin_required), db: AsyncSession = Depe
         raise HTTPException(
             status.HTTP_500_INTERNAL_SERVER_ERROR,
             f"Error while retrieving banned users: {e}"
+        )
+    
+# Get all Requested books
+@router.get("/all-requested-books",status_code=status.HTTP_200_OK)
+async def get_all_requested_books(_:None=Depends(admin_required),db: AsyncSession = Depends(get_async_db)):
+    try:
+        result = await db.execute(select(BookRequestModal.id,BookRequestModal.name,BookRequestModal.author,BookRequestModal.request_by,BookRequestModal.description,BookRequestModal.created_at,BookRequestModal.edition))
+        books =result.mappings().all()
+        if not books:
+            raise HTTPException(
+                status.HTTP_404_NOT_FOUND,
+                "No Books Found"
+            )
+        
+        return {
+            'code':200,
+            'message':'Requested Books',
+            'books':books
+        }
+    
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        raise HTTPException(
+            status.HTTP_500_INTERNAL_SERVER_ERROR,
+            f"Error while Retrieving books: {str(e)}"
+        )
+    
+# Getting Requested Books by status
+@router.get("/requested-books/{status}")
+async def get_requested_books_by_status(book_status:BookRequestStatus,_:None = Depends(admin_required),db: AsyncSession = Depends(get_async_db)):
+    try:
+        result = await db.execute(select(BookRequestModal).where(BookRequestModal.status == book_status))
+        books = result.scalars().all()
+
+        if not books:
+           raise HTTPException(
+                status.HTTP_404_NOT_FOUND,
+                "No Books Found"
+            )
+        
+        return {
+            'code':200,
+            'message':f"Books with {status}",
+            'books':books
+        }
+    
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        raise HTTPException(
+            status.HTTP_500_INTERNAL_SERVER_ERROR,
+            f"Error while Retrieving books: {str(e)}"
         )
