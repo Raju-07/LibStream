@@ -88,6 +88,12 @@ async def ban_user(username: str,_ : None = Depends(admin_required),
         user = await db.execute(select(UserModal).where(UserModal.username == username))
         user = user.scalar_one_or_none()
 
+        if not user.is_active:
+            return {
+                'code':200,
+                'message': "user is already Banned."
+            }
+
         if not user:
             raise HTTPException(status.HTTP_404_NOT_FOUND,
                                 f"{username} doesn't exists")
@@ -99,7 +105,13 @@ async def ban_user(username: str,_ : None = Depends(admin_required),
         return {
             'code':200,
             'message':f'{username} banned successfully',
-            'user': user
+            'user':{
+                    'id':user.id,
+                    'name':user.name,
+                    'username':user.username,
+                    'email':user.email,
+                    'active':user.is_active
+                }
         }
     except HTTPException:
         raise
