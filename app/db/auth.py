@@ -18,40 +18,49 @@ async def createuser(
     user:UserRegister,
     db:AsyncSession = Depends(get_async_db)):
 
-    existing_user = (await db.execute(
-        select(UserModal).where(UserModal.username == user.username)
-    )).scalar_one_or_none()
+    try:
+        existing_user = (await db.execute(
+            select(UserModal).where(UserModal.username == user.username)
+        )).scalar_one_or_none()
 
-    if existing_user:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="User already exists with that username"
+        if existing_user:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="User already exists with that username"
+            )
+
+        existing_email = (await db.execute(
+            select(UserModal).where(UserModal.email == user.email)
+        )).scalar_one_or_none()
+
+        if existing_email:
+            raise HTTPException(
+                status_code=status.HTTP_400_BAD_REQUEST,
+                detail="Account already exists with that email."
+            )
+
+        hashed_password = hash_password(user.password)
+        new_user = UserModal(
+            id=uuid.uuid4(),
+            name=user.name,
+            username=user.username,
+            email=user.email,
+            password=hashed_password,
         )
 
-    existing_email = (await db.execute(
-        select(UserModal).where(UserModal.email == user.email)
-    )).scalar_one_or_none()
+        db.add(new_user)
+        await db.commit()
+        await db.refresh(new_user)
 
-    if existing_email:
-        raise HTTPException(
-            status_code=status.HTTP_400_BAD_REQUEST,
-            detail="Account already exists with that email."
-        )
+        return new_user
+    
+    except HTTPException:
+        raise
 
-    hashed_password = hash_password(user.password)
-    new_user = UserModal(
-        id=uuid.uuid4(),
-        name=user.name,
-        username=user.username,
-        email=user.email,
-        password=hashed_password,
-    )
+    except Exception as e:
+        raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
+                            f"Error while creating user: {e}")
 
-    db.add(new_user)
-    await db.commit()
-    await db.refresh(new_user)
-
-    return new_user
 
 @router.post("/login/")
 async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: AsyncSession = Depends(get_async_db)):
