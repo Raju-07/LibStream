@@ -239,3 +239,31 @@ async def retrieve_all_user(_:None = Depends(admin_required),db: AsyncSession = 
             status.HTTP_500_INTERNAL_SERVER_ERROR,
             f"Error while Retrieving users: {e}"
         )
+    
+#retrieving banned user's
+@router.get("/get-ban-user",response_model=list[AdminUserResponse],status_code=status.HTTP_200_OK)
+async def get_ban_user(_:None = Depends(admin_required), db: AsyncSession = Depends(get_async_db)):
+    try:
+        result = await db.execute(
+            select(UserModal.name,UserModal.id,UserModal.username,UserModal.email,UserModal.is_active,UserModal.is_admin).
+            where(
+                UserModal.is_active == False
+            ))
+        users = result.mappings().all()
+
+        if not users:
+            raise HTTPException(
+                status.HTTP_404_NOT_FOUND,
+                "No user is banned Now"
+            )
+        
+        return users
+    
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        raise HTTPException(
+            status.HTTP_500_INTERNAL_SERVER_ERROR,
+            f"Error while retrieving banned users: {e}"
+        )
