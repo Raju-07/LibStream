@@ -26,7 +26,7 @@ class UserModal(Base):
         cascade= "all,delete-orphan"
         )
     
-    book_requests: Mapped[list["BookRequest"]] = relationship(
+    book_requests: Mapped[list["BookRequestModal"]] = relationship(
         back_populates='requested_by_user',
         cascade="all,delete-orphan"
     )
@@ -93,7 +93,7 @@ class BookRequestStatus(str,Enum):
     COMPLETED = "completed"
 
 # New Book Request
-class BookRequest(Base):
+class BookRequestModal(Base):
 
     __tablename__ = "book_requests"
 
@@ -103,12 +103,12 @@ class BookRequest(Base):
     author: Mapped[str] = mapped_column(String(50))
     edition: Mapped[str] = mapped_column(String(15))
     description: Mapped[str] = mapped_column(String(255))
-    requrest_by: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True),ForeignKey('users.id'),nullable=False)
+    request_by: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True),ForeignKey('users.id'),nullable=False)
 
     status: Mapped[BookRequestStatus] = mapped_column(SQlEnum(BookRequestStatus),
                                         default=BookRequestStatus.PENDING,nullable=False)
     
-    created_at: Mapped[datetime] = mapped_column(DateTime,
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True),
                                     default=datetime.now(timezone.utc),
                                     server_default=func.current_timestamp())
     
