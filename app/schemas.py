@@ -78,15 +78,15 @@ class ViewBookResponse(Base):
 
 # schema for requesting the book
 class BookRequest(Base):
-    book_name : str = Field(...,max_length=100,description="Book Name")
-    author: str = Field(default="Not Known",max_length=100,description="Book Description")
-    edition: Optional[str]
-    description: Optional[str]
+    name : str = Field(...,max_length=100,description="Book Name")
+    author: str = Field(default="",max_length=100,description="Book Description")
+    edition: Optional[str] = Field(default="")
+    description: Optional[str] = Field(default="")
 
 # schema for Responsing the Requested book
 class BookResponse(Base):
     id: int
-    book_name: str
+    name: str
     author: str
     edition: str
     description: str
