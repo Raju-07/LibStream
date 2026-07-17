@@ -1,14 +1,42 @@
 from fastapi import HTTPException,status,APIRouter,Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.exc import NoResultFound
-from sqlalchemy import select,update,and_,or_,insert
+from sqlalchemy import select,update,and_
 from app.db.session import get_async_db
 from app.api.dependencies import get_current_user,is_book_exists
 from app.models import BookAssignModal,UserModal,BooksModal,BookRequestModal
-from app.schemas import BookResponse,UserResponse,BookRequest
+from app.schemas import UserResponse,BookRequest
 
 router = APIRouter(prefix='/user',tags=["Users Operation"])
 
+# Retrieving the books i'm requested for
+@router.get("/my-requested-books",status_code=status.HTTP_200_OK)
+async def my_requested_books(user: UserModal = Depends(get_current_user),db: AsyncSession = Depends(get_async_db)):
+    try:
+        result = await db.execute(select(BookRequestModal).where(BookRequestModal.request_by == user.id))
+        books = result.scalars().all()
+        if not books:
+            raise HTTPException(
+                status.HTTP_404_NOT_FOUND,
+                "No Books Requested"
+            )
+        
+        return {
+            'code':200,
+            'message':"Requested Books",
+            'books': books
+        }
+
+    except HTTPException:
+        raise
+
+    except Exception as e:
+        raise HTTPException(
+            status.HTTP_500_INTERNAL_SERVER_ERROR,
+            f"Error while retrieving my requested books: {str(e)}"
+        )
+    
+# Books that a user ever booked (assigned to user)
 @router.get("/my-all-books", status_code=status.HTTP_200_OK)
 async def get_my_all_books(
     user: UserResponse = Depends(get_current_user),  # Already authenticated user object
@@ -24,7 +52,7 @@ async def get_my_all_books(
                 detail="User ID not found in token"
             )
         
-        # Query books assigned to this user
+        # books assigned to this user
         stmt = select(BookAssignModal).where(BookAssignModal.user_id == user_id)
         results = await db.execute(stmt)
         my_books = results.scalars().all()
@@ -45,17 +73,31 @@ async def get_my_all_books(
         }
         
     except HTTPException:
-        raise  HTTPException(status.HTTP_400_BAD_REQUEST,
-                             "Operation Failed") # Re-raise HTTP exceptions
+        raise  # Re-raise HTTP exceptions
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
             detail=f"Failed to retrieve books: {str(e)}"
         )
 
+# Request For new Book
+@router.post("/requrest-new-book",status_code=status.HTTP_201_CREATED)
+async def request_new_book(new_book: BookRequest,user: UserModal = Depends(get_current_user),db: AsyncSession = Depends(get_async_db)):
+    try:
+        book = BookRequestModal(**new_book.model_dump())
+        book.request_by = user.id
+        db.add(book)
+        await db.commit()
+        await db.refresh(book)
+
+        return book
+    except Exception as e:
+        raise HTTPException(
+            status.HTTP_500_INTERNAL_SERVER_ERROR,
+            f"Error while Requesting new Book: {str(e)}"
+        )
 
 # endpoint to return the book
-
 @router.put("/book-return/{id}",status_code=status.HTTP_200_OK)
 async def return_book(id:int = Depends(is_book_exists), db: AsyncSession = Depends(get_async_db),user: UserResponse = Depends(get_current_user)):
     conditions = [BookAssignModal.user_id == user.id, BookAssignModal.book_id == id,BookAssignModal.is_return==False]
@@ -86,7 +128,7 @@ async def return_book(id:int = Depends(is_book_exists), db: AsyncSession = Depen
             f"Error while Returning Book {str(e)}"
         )
         
-
+# Taking any book to books that available
 @router.patch("/take-book/{id}",status_code=status.HTTP_200_OK)
 async def take_book(id: int = Depends(is_book_exists),current_user: UserResponse= Depends(get_current_user),
                    db: AsyncSession = Depends(get_async_db)):
@@ -118,48 +160,3 @@ async def take_book(id: int = Depends(is_book_exists),current_user: UserResponse
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
                             f"Error occur while book assigning: {e}")
 
-
-# Request For new Book
-@router.post("/requrest-new-book",status_code=status.HTTP_201_CREATED)
-async def request_new_book(new_book: BookRequest,user: UserModal = Depends(get_current_user),db: AsyncSession = Depends(get_async_db)):
-    try:
-        book = BookRequestModal(**new_book.model_dump())
-        book.request_by = user.id
-        db.add(book)
-        await db.commit()
-        await db.refresh(book)
-
-        return book
-    except Exception as e:
-        raise HTTPException(
-            status.HTTP_500_INTERNAL_SERVER_ERROR,
-            f"Error while Requesting new Book: {str(e)}"
-        )
-
-# Retrieving the books i'm requested for
-@router.get("/my-requested-books",status_code=status.HTTP_200_OK)
-async def my_requested_books(user: UserModal = Depends(get_current_user),db: AsyncSession = Depends(get_async_db)):
-    try:
-        result = await db.execute(select(BookRequestModal).where(BookRequestModal.request_by == user.id))
-        books = result.scalars().all()
-        if not books:
-            raise HTTPException(
-                status.HTTP_404_NOT_FOUND,
-                "No Books Requested"
-            )
-        
-        return {
-            'code':200,
-            'message':"Requested Books",
-            'books': books
-        }
-
-    except HTTPException:
-        raise
-
-    except Exception as e:
-        raise HTTPException(
-            status.HTTP_500_INTERNAL_SERVER_ERROR,
-            f"Error while retrieving my requested books: {str(e)}"
-        )
-    
