@@ -1,12 +1,14 @@
 from app.api.dependencies import admin_required,is_book_exists
 from sqlalchemy import select,delete
+from sqlalchemy.orm import joinedload
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import Depends,APIRouter,HTTPException,status
 from app.schemas import AddBookRequest,UpdateBookRequest,UserRegister,AdminUserResponse
 from app.db.session import get_async_db
-from app.models import BooksModal,UserModal,BookRequestModal,BookRequestStatus
+from app.models import BooksModal,UserModal,BookRequestModal,BookRequestStatus,BookAssignModal
 from app.db.books_user_operation import get_book_by_id
 from app.db.auth import createuser
+from datetime import timezone,datetime
 
 router = APIRouter(prefix='/admin',tags=["Admin Operations"])
 
@@ -115,6 +117,68 @@ async def get_requested_books_by_status(book_status:BookRequestStatus,_:None = D
         raise HTTPException(
             status.HTTP_500_INTERNAL_SERVER_ERROR,
             f"Error while Retrieving books: {str(e)}"
+        )
+    
+# Getting all the books that has not been return after last date
+@router.get("/not-returned-books")
+async def not_returned_books(
+    db: AsyncSession = Depends(get_async_db),
+    _: None = Depends(admin_required)
+):
+    try:
+        result = await db.execute(
+            select(BookAssignModal)
+            .options(
+                joinedload(BookAssignModal.book),   # load book info
+                joinedload(BookAssignModal.user)    # load user info
+            )
+            .where(BookAssignModal.expired_at < datetime.now(timezone.utc))
+            .where(BookAssignModal.is_return == False)   # only not returned
+        )
+        assignments = result.scalars().all()
+
+        if not assignments:
+            raise HTTPException(
+                status_code=status.HTTP_404_NOT_FOUND,
+                detail="No Books Found"
+            )
+
+        # Build response with book + user details
+        books = [
+            {
+                "assign_id": a.index,
+                "expired_at": a.expired_at,
+                "book": {
+                    "id": a.book.id,
+                    "name": a.book.name,
+                    "author": a.book.author,
+                    "category": a.book.category,
+                    "location": a.book.location,
+                },
+                "user": {
+                    "id": a.user.id,
+                    "name": a.user.name,
+                    "username": a.user.username,
+                    "email": a.user.email,
+                    "is_active": a.user.is_active,
+                    "is_admin": a.user.is_admin,
+                }
+            }
+            for a in assignments
+        ]
+
+        return {
+            "code": 200,
+            "message": "Books not returned after due date.",
+            "books": books
+        }
+
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail=f"Error while retrieving books: {e}"
         )
     
 @router.post('/add-book')
