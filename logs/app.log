@@ -1,0 +1,1066 @@
+2026-07-18 23:09:22 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:09:22 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:09:22 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:09:22 - uvicorn.error - INFO - Finished server process [22721]
+2026-07-18 23:09:24 - uvicorn.error - INFO - Started server process [23276]
+2026-07-18 23:09:24 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:09:24 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:10:19 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:10:19 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:10:19 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:10:19 - uvicorn.error - INFO - Finished server process [23276]
+2026-07-18 23:10:21 - uvicorn.error - INFO - Started server process [23575]
+2026-07-18 23:10:21 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:10:21 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:10:35 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:10:35 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:10:35 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:10:35 - uvicorn.error - INFO - Finished server process [23575]
+2026-07-18 23:10:37 - uvicorn.error - INFO - Started server process [23741]
+2026-07-18 23:10:37 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:10:37 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:12:42 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:12:42 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:12:42 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:12:42 - uvicorn.error - INFO - Finished server process [23741]
+2026-07-18 23:12:43 - uvicorn.error - INFO - Started server process [24344]
+2026-07-18 23:12:43 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:12:43 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:12:45 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:12:45 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:12:45 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:12:45 - uvicorn.error - INFO - Finished server process [24344]
+2026-07-18 23:12:47 - uvicorn.error - INFO - Started server process [24396]
+2026-07-18 23:12:47 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:12:47 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:12:48 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:12:48 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:12:48 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:12:48 - uvicorn.error - INFO - Finished server process [24396]
+2026-07-18 23:12:50 - uvicorn.error - INFO - Started server process [24424]
+2026-07-18 23:12:50 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:12:51 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:12:57 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:12:57 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:12:57 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:12:57 - uvicorn.error - INFO - Finished server process [24424]
+2026-07-18 23:12:58 - uvicorn.error - INFO - Started server process [24541]
+2026-07-18 23:12:58 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:12:58 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:13:00 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:13:00 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:13:00 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:13:00 - uvicorn.error - INFO - Finished server process [24541]
+2026-07-18 23:13:01 - uvicorn.error - INFO - Started server process [24591]
+2026-07-18 23:13:01 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:13:01 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:14:04 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:14:05 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:14:05 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:14:05 - uvicorn.error - INFO - Finished server process [24591]
+2026-07-18 23:14:50 - uvicorn.error - INFO - Started server process [25553]
+2026-07-18 23:14:50 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:14:50 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:14:51 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:14:51 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:14:51 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:14:51 - uvicorn.error - INFO - Finished server process [25553]
+2026-07-18 23:14:53 - uvicorn.error - INFO - Started server process [25603]
+2026-07-18 23:14:53 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:14:53 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:15:00 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:15:01 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:15:01 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:15:01 - uvicorn.error - INFO - Finished server process [25603]
+2026-07-18 23:15:02 - uvicorn.error - INFO - Started server process [25734]
+2026-07-18 23:15:02 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:15:02 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:15:25 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:15:25 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:15:25 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:15:25 - uvicorn.error - INFO - Finished server process [25734]
+2026-07-18 23:15:26 - uvicorn.error - INFO - Started server process [25898]
+2026-07-18 23:15:26 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:15:26 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:17:41 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:17:41 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:17:41 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:17:41 - uvicorn.error - INFO - Finished server process [25898]
+2026-07-18 23:24:18 - uvicorn.error - INFO - Started server process [29260]
+2026-07-18 23:24:18 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:24:18 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:24:31 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:24:31 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:24:31 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:24:31 - uvicorn.error - INFO - Finished server process [29260]
+2026-07-18 23:24:32 - uvicorn.error - INFO - Started server process [29401]
+2026-07-18 23:24:32 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:24:32 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:24:42 - app - INFO - Getting Route message 
+
+2026-07-18 23:25:14 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:25:14 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:25:14 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:25:14 - uvicorn.error - INFO - Finished server process [29401]
+2026-07-18 23:25:16 - uvicorn.error - INFO - Started server process [29681]
+2026-07-18 23:25:16 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:25:16 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:25:17 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:25:17 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:25:17 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:25:17 - uvicorn.error - INFO - Finished server process [29681]
+2026-07-18 23:25:19 - uvicorn.error - INFO - Started server process [29714]
+2026-07-18 23:25:19 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:25:19 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:25:20 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:25:20 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:25:20 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:25:20 - uvicorn.error - INFO - Finished server process [29714]
+2026-07-18 23:25:23 - uvicorn.error - INFO - Started server process [29789]
+2026-07-18 23:25:23 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:25:23 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:25:26 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:25:26 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:25:26 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:25:26 - uvicorn.error - INFO - Finished server process [29789]
+2026-07-18 23:25:32 - uvicorn.error - INFO - Started server process [29913]
+2026-07-18 23:25:32 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:25:32 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:25:32 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:25:32 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:25:32 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:25:32 - uvicorn.error - INFO - Finished server process [29913]
+2026-07-18 23:25:40 - uvicorn.error - INFO - Started server process [30038]
+2026-07-18 23:25:40 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:25:40 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:25:47 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:25:47 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:25:47 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:25:47 - uvicorn.error - INFO - Finished server process [30038]
+2026-07-18 23:25:48 - uvicorn.error - INFO - Started server process [30157]
+2026-07-18 23:25:48 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:25:48 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:25:52 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:25:52 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:25:52 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:25:52 - uvicorn.error - INFO - Finished server process [30157]
+2026-07-18 23:25:54 - uvicorn.error - INFO - Started server process [30232]
+2026-07-18 23:25:54 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:25:54 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:26:14 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:26:14 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:26:14 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:26:14 - uvicorn.error - INFO - Finished server process [30232]
+2026-07-18 23:26:15 - uvicorn.error - INFO - Started server process [30385]
+2026-07-18 23:26:15 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:26:16 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:26:16 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:26:16 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:26:16 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:26:16 - uvicorn.error - INFO - Finished server process [30385]
+2026-07-18 23:26:18 - uvicorn.error - INFO - Started server process [30439]
+2026-07-18 23:26:18 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:26:18 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:26:20 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:26:20 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:26:20 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:26:20 - uvicorn.error - INFO - Finished server process [30439]
+2026-07-18 23:26:23 - uvicorn.error - INFO - Started server process [30530]
+2026-07-18 23:26:23 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:26:23 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:26:27 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:26:27 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:26:27 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:26:27 - uvicorn.error - INFO - Finished server process [30530]
+2026-07-18 23:26:29 - uvicorn.error - INFO - Started server process [30583]
+2026-07-18 23:26:29 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:26:29 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:26:31 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:26:31 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:26:31 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:26:31 - uvicorn.error - INFO - Finished server process [30583]
+2026-07-18 23:26:33 - uvicorn.error - INFO - Started server process [30639]
+2026-07-18 23:26:33 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:26:33 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:26:39 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:26:39 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:26:39 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:26:39 - uvicorn.error - INFO - Finished server process [30639]
+2026-07-18 23:26:40 - uvicorn.error - INFO - Started server process [30735]
+2026-07-18 23:26:40 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:26:40 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:26:47 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:26:47 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:26:47 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:26:47 - uvicorn.error - INFO - Finished server process [30735]
+2026-07-18 23:26:49 - uvicorn.error - INFO - Started server process [30846]
+2026-07-18 23:26:49 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:26:49 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:27:05 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:27:05 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:27:05 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:27:05 - uvicorn.error - INFO - Finished server process [30846]
+2026-07-18 23:27:07 - uvicorn.error - INFO - Started server process [30978]
+2026-07-18 23:27:07 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:27:07 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:27:10 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:27:10 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:27:10 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:27:10 - uvicorn.error - INFO - Finished server process [30978]
+2026-07-18 23:27:12 - uvicorn.error - INFO - Started server process [31058]
+2026-07-18 23:27:12 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:27:12 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:27:16 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:27:16 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:27:16 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:27:16 - uvicorn.error - INFO - Finished server process [31058]
+2026-07-18 23:27:18 - uvicorn.error - INFO - Started server process [31160]
+2026-07-18 23:27:18 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:27:18 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:27:22 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:27:22 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:27:22 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:27:22 - uvicorn.error - INFO - Finished server process [31160]
+2026-07-18 23:27:23 - uvicorn.error - INFO - Started server process [31249]
+2026-07-18 23:27:23 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:27:23 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:27:28 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:27:28 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:27:28 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:27:28 - uvicorn.error - INFO - Finished server process [31249]
+2026-07-18 23:27:29 - uvicorn.error - INFO - Started server process [31330]
+2026-07-18 23:27:29 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:27:29 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:27:33 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:27:33 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:27:33 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:27:33 - uvicorn.error - INFO - Finished server process [31330]
+2026-07-18 23:27:35 - uvicorn.error - INFO - Started server process [31396]
+2026-07-18 23:27:35 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:27:35 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:27:36 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:27:37 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:27:37 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:27:37 - uvicorn.error - INFO - Finished server process [31396]
+2026-07-18 23:27:38 - uvicorn.error - INFO - Started server process [31445]
+2026-07-18 23:27:38 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:27:38 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:27:42 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:27:42 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:27:42 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:27:42 - uvicorn.error - INFO - Finished server process [31445]
+2026-07-18 23:27:44 - uvicorn.error - INFO - Started server process [31534]
+2026-07-18 23:27:44 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:27:44 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:27:47 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:27:47 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:27:47 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:27:47 - uvicorn.error - INFO - Finished server process [31534]
+2026-07-18 23:27:49 - uvicorn.error - INFO - Started server process [31609]
+2026-07-18 23:27:49 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:27:49 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:27:51 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:27:51 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:27:51 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:27:51 - uvicorn.error - INFO - Finished server process [31609]
+2026-07-18 23:27:53 - uvicorn.error - INFO - Started server process [31667]
+2026-07-18 23:27:53 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:27:53 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:28:02 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:28:02 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:28:02 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:28:02 - uvicorn.error - INFO - Finished server process [31667]
+2026-07-18 23:28:04 - uvicorn.error - INFO - Started server process [31787]
+2026-07-18 23:28:04 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:28:04 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:28:06 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:28:06 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:28:06 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:28:06 - uvicorn.error - INFO - Finished server process [31787]
+2026-07-18 23:28:09 - uvicorn.error - INFO - Started server process [31862]
+2026-07-18 23:28:09 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:28:09 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:28:29 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:28:29 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:28:29 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:28:29 - uvicorn.error - INFO - Finished server process [31862]
+2026-07-18 23:28:38 - uvicorn.error - INFO - Started server process [32152]
+2026-07-18 23:28:38 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:28:39 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:28:40 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:28:41 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:28:41 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:28:41 - uvicorn.error - INFO - Finished server process [32152]
+2026-07-18 23:28:46 - uvicorn.error - INFO - Started server process [32229]
+2026-07-18 23:28:46 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:28:46 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:28:46 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:28:46 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:28:46 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:28:46 - uvicorn.error - INFO - Finished server process [32229]
+2026-07-18 23:28:50 - uvicorn.error - INFO - Started server process [32301]
+2026-07-18 23:28:50 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:28:50 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:29:40 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:29:41 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:29:41 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:29:41 - uvicorn.error - INFO - Finished server process [32301]
+2026-07-18 23:29:43 - uvicorn.error - INFO - Started server process [32615]
+2026-07-18 23:29:43 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:29:43 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:29:48 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:29:48 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:29:48 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:29:48 - uvicorn.error - INFO - Finished server process [32615]
+2026-07-18 23:29:50 - uvicorn.error - INFO - Started server process [32724]
+2026-07-18 23:29:50 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:29:50 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:29:52 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:29:52 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:29:52 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:29:52 - uvicorn.error - INFO - Finished server process [32724]
+2026-07-18 23:29:54 - uvicorn.error - INFO - Started server process [32782]
+2026-07-18 23:29:54 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:29:54 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:29:55 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:29:55 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:29:55 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:29:55 - uvicorn.error - INFO - Finished server process [32782]
+2026-07-18 23:29:57 - uvicorn.error - INFO - Started server process [32824]
+2026-07-18 23:29:57 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:29:57 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:29:57 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:29:57 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:29:57 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:29:57 - uvicorn.error - INFO - Finished server process [32824]
+2026-07-18 23:29:59 - uvicorn.error - INFO - Started server process [32863]
+2026-07-18 23:29:59 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:29:59 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:30:01 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:30:01 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:30:01 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:30:01 - uvicorn.error - INFO - Finished server process [32863]
+2026-07-18 23:30:04 - uvicorn.error - INFO - Started server process [32926]
+2026-07-18 23:30:04 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:30:04 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:30:04 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:30:04 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:30:04 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:30:04 - uvicorn.error - INFO - Finished server process [32926]
+2026-07-18 23:30:07 - uvicorn.error - INFO - Started server process [32976]
+2026-07-18 23:30:07 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:30:07 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:30:12 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:30:12 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:30:12 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:30:12 - uvicorn.error - INFO - Finished server process [32976]
+2026-07-18 23:30:14 - uvicorn.error - INFO - Started server process [33073]
+2026-07-18 23:30:14 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:30:14 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:30:15 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:30:15 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:30:15 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:30:15 - uvicorn.error - INFO - Finished server process [33073]
+2026-07-18 23:30:16 - uvicorn.error - INFO - Started server process [33134]
+2026-07-18 23:30:16 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:30:16 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:30:27 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:30:27 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:30:27 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:30:27 - uvicorn.error - INFO - Finished server process [33134]
+2026-07-18 23:30:30 - uvicorn.error - INFO - Started server process [33260]
+2026-07-18 23:30:30 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:30:30 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:30:32 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:30:32 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:30:32 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:30:32 - uvicorn.error - INFO - Finished server process [33260]
+2026-07-18 23:30:34 - uvicorn.error - INFO - Started server process [33338]
+2026-07-18 23:30:34 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:30:34 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:30:34 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:30:34 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:30:34 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:30:34 - uvicorn.error - INFO - Finished server process [33338]
+2026-07-18 23:30:35 - uvicorn.error - INFO - Started server process [33359]
+2026-07-18 23:30:35 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:30:35 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:30:36 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:30:36 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:30:36 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:30:36 - uvicorn.error - INFO - Finished server process [33359]
+2026-07-18 23:30:43 - uvicorn.error - INFO - Started server process [33477]
+2026-07-18 23:30:43 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:30:43 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:30:59 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:30:59 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:30:59 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:30:59 - uvicorn.error - INFO - Finished server process [33477]
+2026-07-18 23:31:00 - uvicorn.error - INFO - Started server process [33612]
+2026-07-18 23:31:00 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:31:00 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:31:09 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:31:09 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:31:09 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:31:09 - uvicorn.error - INFO - Finished server process [33612]
+2026-07-18 23:31:11 - uvicorn.error - INFO - Started server process [33718]
+2026-07-18 23:31:11 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:31:11 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:31:12 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:31:12 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:31:12 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:31:12 - uvicorn.error - INFO - Finished server process [33718]
+2026-07-18 23:31:14 - uvicorn.error - INFO - Started server process [33769]
+2026-07-18 23:31:14 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:31:14 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:31:15 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:31:16 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:31:16 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:31:16 - uvicorn.error - INFO - Finished server process [33769]
+2026-07-18 23:31:17 - uvicorn.error - INFO - Started server process [33825]
+2026-07-18 23:31:17 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:31:17 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:32:18 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:32:19 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:32:19 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:32:19 - uvicorn.error - INFO - Finished server process [33825]
+2026-07-18 23:32:31 - uvicorn.error - INFO - Started server process [34316]
+2026-07-18 23:32:31 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:32:31 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:32:31 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:32:31 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:32:31 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:32:31 - uvicorn.error - INFO - Finished server process [34316]
+2026-07-18 23:32:32 - uvicorn.error - INFO - Started server process [34374]
+2026-07-18 23:32:32 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:32:32 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:32:37 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:32:37 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:32:37 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:32:37 - uvicorn.error - INFO - Finished server process [34374]
+2026-07-18 23:32:39 - uvicorn.error - INFO - Started server process [34472]
+2026-07-18 23:32:39 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:32:39 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:32:40 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:32:40 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:32:40 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:32:40 - uvicorn.error - INFO - Finished server process [34472]
+2026-07-18 23:32:43 - uvicorn.error - INFO - Started server process [34519]
+2026-07-18 23:32:43 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:32:43 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:32:51 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:32:51 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:32:51 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:32:51 - uvicorn.error - INFO - Finished server process [34519]
+2026-07-18 23:32:53 - uvicorn.error - INFO - Started server process [34633]
+2026-07-18 23:32:53 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:32:53 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:32:59 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:32:59 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:32:59 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:32:59 - uvicorn.error - INFO - Finished server process [34633]
+2026-07-18 23:33:00 - uvicorn.error - INFO - Started server process [34726]
+2026-07-18 23:33:00 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:33:00 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:33:55 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:33:55 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:33:55 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:33:55 - uvicorn.error - INFO - Finished server process [34726]
+2026-07-18 23:33:57 - uvicorn.error - INFO - Started server process [35039]
+2026-07-18 23:33:57 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:33:57 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:33:57 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:33:57 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:33:57 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:33:57 - uvicorn.error - INFO - Finished server process [35039]
+2026-07-18 23:33:58 - uvicorn.error - INFO - Started server process [35073]
+2026-07-18 23:33:58 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:33:58 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:34:25 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:34:26 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:34:26 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:34:26 - uvicorn.error - INFO - Finished server process [35073]
+2026-07-18 23:34:28 - uvicorn.error - INFO - Started server process [35260]
+2026-07-18 23:34:28 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:34:28 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:34:31 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:34:31 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:34:31 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:34:31 - uvicorn.error - INFO - Finished server process [35260]
+2026-07-18 23:34:33 - uvicorn.error - INFO - Started server process [35350]
+2026-07-18 23:34:33 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:34:33 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:34:33 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:34:33 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:34:33 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:34:33 - uvicorn.error - INFO - Finished server process [35350]
+2026-07-18 23:34:34 - uvicorn.error - INFO - Started server process [35393]
+2026-07-18 23:34:34 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:34:34 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:34:42 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:34:42 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:34:42 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:34:42 - uvicorn.error - INFO - Finished server process [35393]
+2026-07-18 23:34:44 - uvicorn.error - INFO - Started server process [35501]
+2026-07-18 23:34:44 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:34:44 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:34:47 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:34:47 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:34:47 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:34:47 - uvicorn.error - INFO - Finished server process [35501]
+2026-07-18 23:34:48 - uvicorn.error - INFO - Started server process [35581]
+2026-07-18 23:34:48 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:34:48 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:34:49 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:34:49 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:34:49 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:34:49 - uvicorn.error - INFO - Finished server process [35581]
+2026-07-18 23:34:51 - uvicorn.error - INFO - Started server process [35614]
+2026-07-18 23:34:51 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:34:51 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:34:52 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:34:52 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:34:52 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:34:52 - uvicorn.error - INFO - Finished server process [35614]
+2026-07-18 23:34:53 - uvicorn.error - INFO - Started server process [35650]
+2026-07-18 23:34:53 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:34:54 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:35:06 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:35:06 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:35:06 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:35:06 - uvicorn.error - INFO - Finished server process [35650]
+2026-07-18 23:35:09 - uvicorn.error - INFO - Started server process [35799]
+2026-07-18 23:35:09 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:35:09 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:35:09 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:35:09 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:35:09 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:35:09 - uvicorn.error - INFO - Finished server process [35799]
+2026-07-18 23:35:11 - uvicorn.error - INFO - Started server process [35855]
+2026-07-18 23:35:11 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:35:11 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:35:11 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:35:11 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:35:11 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:35:11 - uvicorn.error - INFO - Finished server process [35855]
+2026-07-18 23:35:12 - uvicorn.error - INFO - Started server process [35879]
+2026-07-18 23:35:12 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:35:12 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:35:47 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:35:47 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:35:47 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:35:47 - uvicorn.error - INFO - Finished server process [35879]
+2026-07-18 23:35:57 - uvicorn.error - INFO - Started server process [36195]
+2026-07-18 23:35:57 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:35:57 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:36:06 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:36:06 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:36:06 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:36:06 - uvicorn.error - INFO - Finished server process [36195]
+2026-07-18 23:36:08 - uvicorn.error - INFO - Started server process [36284]
+2026-07-18 23:36:08 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:36:08 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:36:19 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:36:19 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:36:19 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:36:19 - uvicorn.error - INFO - Finished server process [36284]
+2026-07-18 23:36:20 - uvicorn.error - INFO - Started server process [36424]
+2026-07-18 23:36:20 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:36:20 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:36:23 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:36:23 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:36:23 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:36:23 - uvicorn.error - INFO - Finished server process [36424]
+2026-07-18 23:36:24 - uvicorn.error - INFO - Started server process [36498]
+2026-07-18 23:36:24 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:36:24 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:36:24 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:36:25 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:36:25 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:36:25 - uvicorn.error - INFO - Finished server process [36498]
+2026-07-18 23:36:26 - uvicorn.error - INFO - Started server process [36506]
+2026-07-18 23:36:26 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:36:26 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:36:29 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:36:29 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:36:29 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:36:29 - uvicorn.error - INFO - Finished server process [36506]
+2026-07-18 23:36:33 - uvicorn.error - INFO - Started server process [36630]
+2026-07-18 23:36:33 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:36:33 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:36:33 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:36:34 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:36:34 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:36:34 - uvicorn.error - INFO - Finished server process [36630]
+2026-07-18 23:36:35 - uvicorn.error - INFO - Started server process [36654]
+2026-07-18 23:36:35 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:36:35 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:36:37 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:36:37 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:36:37 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:36:37 - uvicorn.error - INFO - Finished server process [36654]
+2026-07-18 23:36:39 - uvicorn.error - INFO - Started server process [36705]
+2026-07-18 23:36:39 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:36:39 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:36:45 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:36:45 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:36:45 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:36:45 - uvicorn.error - INFO - Finished server process [36705]
+2026-07-18 23:36:47 - uvicorn.error - INFO - Started server process [36777]
+2026-07-18 23:36:47 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:36:47 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:36:51 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:36:51 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:36:51 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:36:51 - uvicorn.error - INFO - Finished server process [36777]
+2026-07-18 23:36:53 - uvicorn.error - INFO - Started server process [36867]
+2026-07-18 23:36:53 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:36:53 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:36:53 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:36:53 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:36:53 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:36:53 - uvicorn.error - INFO - Finished server process [36867]
+2026-07-18 23:36:55 - uvicorn.error - INFO - Started server process [36899]
+2026-07-18 23:36:55 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:36:55 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:37:16 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:37:16 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:37:16 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:37:16 - uvicorn.error - INFO - Finished server process [36899]
+2026-07-18 23:37:18 - uvicorn.error - INFO - Started server process [37068]
+2026-07-18 23:37:18 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:37:18 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:37:25 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:37:25 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:37:25 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:37:25 - uvicorn.error - INFO - Finished server process [37068]
+2026-07-18 23:37:27 - uvicorn.error - INFO - Started server process [37170]
+2026-07-18 23:37:27 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:37:28 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:37:28 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:37:28 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:37:28 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:37:28 - uvicorn.error - INFO - Finished server process [37170]
+2026-07-18 23:37:30 - uvicorn.error - INFO - Started server process [37210]
+2026-07-18 23:37:30 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:37:30 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:37:31 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:37:31 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:37:31 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:37:31 - uvicorn.error - INFO - Finished server process [37210]
+2026-07-18 23:37:33 - uvicorn.error - INFO - Started server process [37256]
+2026-07-18 23:37:33 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:37:33 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:37:38 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:37:38 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:37:38 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:37:38 - uvicorn.error - INFO - Finished server process [37256]
+2026-07-18 23:37:39 - uvicorn.error - INFO - Started server process [37342]
+2026-07-18 23:37:39 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:37:39 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:37:40 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:37:40 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:37:40 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:37:40 - uvicorn.error - INFO - Finished server process [37342]
+2026-07-18 23:37:42 - uvicorn.error - INFO - Started server process [37379]
+2026-07-18 23:37:42 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:37:42 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:37:58 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:37:58 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:37:58 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:37:58 - uvicorn.error - INFO - Finished server process [37379]
+2026-07-18 23:37:59 - uvicorn.error - INFO - Started server process [37515]
+2026-07-18 23:37:59 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:37:59 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:38:23 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:38:24 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:38:24 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:38:24 - uvicorn.error - INFO - Finished server process [37515]
+2026-07-18 23:38:28 - uvicorn.error - INFO - Started server process [37763]
+2026-07-18 23:38:28 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:38:28 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:38:28 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:38:28 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:38:28 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:38:28 - uvicorn.error - INFO - Finished server process [37763]
+2026-07-18 23:38:31 - uvicorn.error - INFO - Started server process [37793]
+2026-07-18 23:38:31 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:38:31 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:38:35 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:38:35 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:38:35 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:38:35 - uvicorn.error - INFO - Finished server process [37793]
+2026-07-18 23:38:36 - uvicorn.error - INFO - Started server process [37893]
+2026-07-18 23:38:36 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:38:36 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:38:39 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:38:39 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:38:39 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:38:39 - uvicorn.error - INFO - Finished server process [37893]
+2026-07-18 23:38:41 - uvicorn.error - INFO - Started server process [37949]
+2026-07-18 23:38:41 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:38:41 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:38:49 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:38:49 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:38:49 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:38:49 - uvicorn.error - INFO - Finished server process [37949]
+2026-07-18 23:38:51 - uvicorn.error - INFO - Started server process [38063]
+2026-07-18 23:38:51 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:38:51 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:38:53 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:38:53 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:38:53 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:38:53 - uvicorn.error - INFO - Finished server process [38063]
+2026-07-18 23:38:54 - uvicorn.error - INFO - Started server process [38127]
+2026-07-18 23:38:54 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:38:54 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:39:01 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:39:01 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:39:01 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:39:01 - uvicorn.error - INFO - Finished server process [38127]
+2026-07-18 23:39:03 - uvicorn.error - INFO - Started server process [38242]
+2026-07-18 23:39:03 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:39:03 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:39:17 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:39:17 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:39:17 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:39:17 - uvicorn.error - INFO - Finished server process [38242]
+2026-07-18 23:39:19 - uvicorn.error - INFO - Started server process [38398]
+2026-07-18 23:39:19 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:39:20 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:39:29 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:39:29 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:39:29 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:39:29 - uvicorn.error - INFO - Finished server process [38398]
+2026-07-18 23:39:30 - uvicorn.error - INFO - Started server process [38521]
+2026-07-18 23:39:30 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:39:30 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:39:37 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:39:37 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:39:37 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:39:37 - uvicorn.error - INFO - Finished server process [38521]
+2026-07-18 23:39:38 - uvicorn.error - INFO - Started server process [38626]
+2026-07-18 23:39:38 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:39:38 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:39:50 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:39:50 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:39:50 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:39:50 - uvicorn.error - INFO - Finished server process [38626]
+2026-07-18 23:39:52 - uvicorn.error - INFO - Started server process [38721]
+2026-07-18 23:39:52 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:39:52 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:39:52 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:39:52 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:39:52 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:39:52 - uvicorn.error - INFO - Finished server process [38721]
+2026-07-18 23:39:58 - uvicorn.error - INFO - Started server process [38799]
+2026-07-18 23:39:58 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:39:58 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:39:58 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:39:58 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:39:58 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:39:58 - uvicorn.error - INFO - Finished server process [38799]
+2026-07-18 23:39:59 - uvicorn.error - INFO - Started server process [38852]
+2026-07-18 23:39:59 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:39:59 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:41:05 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:41:05 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:41:05 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:41:05 - uvicorn.error - INFO - Finished server process [38852]
+2026-07-18 23:41:07 - uvicorn.error - INFO - Started server process [39203]
+2026-07-18 23:41:07 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:41:08 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:41:08 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:41:08 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:41:08 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:41:08 - uvicorn.error - INFO - Finished server process [39203]
+2026-07-18 23:41:10 - uvicorn.error - INFO - Started server process [39260]
+2026-07-18 23:41:10 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:41:10 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:41:23 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:41:23 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:41:23 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:41:23 - uvicorn.error - INFO - Finished server process [39260]
+2026-07-18 23:41:25 - uvicorn.error - INFO - Started server process [39395]
+2026-07-18 23:41:25 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:41:25 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:41:26 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:41:26 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:41:26 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:41:26 - uvicorn.error - INFO - Finished server process [39395]
+2026-07-18 23:41:31 - uvicorn.error - INFO - Started server process [39489]
+2026-07-18 23:41:31 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:41:31 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:41:31 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:41:31 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:41:31 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:41:31 - uvicorn.error - INFO - Finished server process [39489]
+2026-07-18 23:41:33 - uvicorn.error - INFO - Started server process [39515]
+2026-07-18 23:41:33 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:41:33 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:41:37 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:41:37 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:41:37 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:41:37 - uvicorn.error - INFO - Finished server process [39515]
+2026-07-18 23:41:39 - uvicorn.error - INFO - Started server process [39590]
+2026-07-18 23:41:39 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:41:39 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:41:39 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:41:39 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:41:39 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:41:39 - uvicorn.error - INFO - Finished server process [39590]
+2026-07-18 23:41:41 - uvicorn.error - INFO - Started server process [39607]
+2026-07-18 23:41:41 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:41:41 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:41:46 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:41:46 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:41:46 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:41:46 - uvicorn.error - INFO - Finished server process [39607]
+2026-07-18 23:41:47 - uvicorn.error - INFO - Started server process [39707]
+2026-07-18 23:41:47 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:41:47 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:44:10 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:44:10 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:44:10 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:44:10 - uvicorn.error - INFO - Finished server process [39707]
+2026-07-18 23:44:11 - uvicorn.error - INFO - Started server process [40455]
+2026-07-18 23:44:11 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:44:11 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:44:37 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:44:37 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:44:37 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:44:37 - uvicorn.error - INFO - Finished server process [40455]
+2026-07-18 23:44:39 - uvicorn.error - INFO - Started server process [40658]
+2026-07-18 23:44:39 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:44:39 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:44:41 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:44:42 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:44:42 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:44:42 - uvicorn.error - INFO - Finished server process [40658]
+2026-07-18 23:44:43 - uvicorn.error - INFO - Started server process [40724]
+2026-07-18 23:44:43 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:44:43 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:45:50 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:45:50 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:45:50 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:45:50 - uvicorn.error - INFO - Finished server process [40724]
+2026-07-18 23:45:51 - uvicorn.error - INFO - Started server process [41108]
+2026-07-18 23:45:51 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:45:52 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:56:49 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:56:49 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:56:49 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:56:49 - uvicorn.error - INFO - Finished server process [41108]
+2026-07-18 23:56:58 - uvicorn.error - INFO - Started server process [44202]
+2026-07-18 23:56:58 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:56:58 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:57:12 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:57:12 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:57:12 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:57:12 - uvicorn.error - INFO - Finished server process [44202]
+2026-07-18 23:57:16 - uvicorn.error - INFO - Started server process [44360]
+2026-07-18 23:57:16 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:57:16 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:57:24 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:57:25 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:57:25 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:57:25 - uvicorn.error - INFO - Finished server process [44360]
+2026-07-18 23:57:26 - uvicorn.error - INFO - Started server process [44466]
+2026-07-18 23:57:26 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:57:26 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:57:31 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:57:31 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:57:31 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:57:31 - uvicorn.error - INFO - Finished server process [44466]
+2026-07-18 23:57:32 - uvicorn.error - INFO - Started server process [44561]
+2026-07-18 23:57:32 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:57:32 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:57:37 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:57:37 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:57:37 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:57:37 - uvicorn.error - INFO - Finished server process [44561]
+2026-07-18 23:57:38 - uvicorn.error - INFO - Started server process [44651]
+2026-07-18 23:57:38 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:57:38 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:57:42 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:57:42 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:57:42 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:57:42 - uvicorn.error - INFO - Finished server process [44651]
+2026-07-18 23:57:45 - uvicorn.error - INFO - Started server process [44741]
+2026-07-18 23:57:45 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-18 23:57:45 - uvicorn.error - INFO - Application startup complete.
+2026-07-18 23:59:51 - uvicorn.error - INFO - Shutting down
+2026-07-18 23:59:51 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-18 23:59:51 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-18 23:59:51 - uvicorn.error - INFO - Finished server process [44741]
+2026-07-19 00:00:40 - uvicorn.error - INFO - Started server process [45891]
+2026-07-19 00:00:40 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:00:40 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:00:40 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:00:40 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:00:40 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:00:40 - uvicorn.error - INFO - Finished server process [45891]
+2026-07-19 00:00:42 - uvicorn.error - INFO - Started server process [45918]
+2026-07-19 00:00:42 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:00:42 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:00:44 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:00:44 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:00:44 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:00:44 - uvicorn.error - INFO - Finished server process [45918]
+2026-07-19 00:00:52 - uvicorn.error - INFO - Started server process [46050]
+2026-07-19 00:00:52 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:00:53 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:00:55 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:00:55 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:00:55 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:00:55 - uvicorn.error - INFO - Finished server process [46050]
+2026-07-19 00:01:14 - uvicorn.error - INFO - Started server process [46315]
+2026-07-19 00:01:14 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:01:14 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:01:30 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:01:30 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:01:30 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:01:30 - uvicorn.error - INFO - Finished server process [46315]
+2026-07-19 00:01:32 - uvicorn.error - INFO - Started server process [46475]
+2026-07-19 00:01:32 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:01:32 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:04:15 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:04:15 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:04:15 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:04:15 - uvicorn.error - INFO - Finished server process [46475]
+2026-07-19 00:04:57 - uvicorn.error - INFO - Started server process [47783]
+2026-07-19 00:04:57 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:04:57 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:05:07 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:05:07 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:05:07 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:05:07 - uvicorn.error - INFO - Finished server process [47783]
+2026-07-19 00:05:08 - uvicorn.error - INFO - Started server process [47897]
+2026-07-19 00:05:08 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:05:08 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:05:18 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:05:18 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:05:18 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:05:18 - uvicorn.error - INFO - Finished server process [47897]
+2026-07-19 00:05:21 - uvicorn.error - INFO - Started server process [47998]
+2026-07-19 00:05:21 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:05:21 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:05:21 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:05:21 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:05:21 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:05:21 - uvicorn.error - INFO - Finished server process [47998]
+2026-07-19 00:05:34 - uvicorn.error - INFO - Started server process [48183]
+2026-07-19 00:05:34 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:05:34 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:06:14 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:06:14 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:06:14 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:06:14 - uvicorn.error - INFO - Finished server process [48183]
+2026-07-19 00:06:16 - uvicorn.error - INFO - Started server process [48449]
+2026-07-19 00:06:16 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:06:16 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:06:18 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:06:18 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:06:18 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:06:18 - uvicorn.error - INFO - Finished server process [48449]
+2026-07-19 00:06:20 - uvicorn.error - INFO - Started server process [48523]
+2026-07-19 00:06:20 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:06:20 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:06:22 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:06:22 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:06:22 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:06:22 - uvicorn.error - INFO - Finished server process [48523]
+2026-07-19 00:06:23 - uvicorn.error - INFO - Started server process [48569]
+2026-07-19 00:06:23 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:06:24 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:07:35 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:07:35 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:07:35 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:07:35 - uvicorn.error - INFO - Finished server process [48569]
+2026-07-19 00:07:37 - uvicorn.error - INFO - Started server process [48980]
+2026-07-19 00:07:37 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:07:38 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:07:43 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:07:43 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:07:43 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:07:43 - uvicorn.error - INFO - Finished server process [48980]
+2026-07-19 00:07:44 - uvicorn.error - INFO - Started server process [49099]
+2026-07-19 00:07:44 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:07:44 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:08:16 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:08:16 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:08:16 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:08:16 - uvicorn.error - INFO - Finished server process [49099]
+2026-07-19 00:08:18 - uvicorn.error - INFO - Started server process [49289]
+2026-07-19 00:08:18 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:08:18 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:08:18 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:08:18 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:08:18 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:08:18 - uvicorn.error - INFO - Finished server process [49289]
+2026-07-19 00:08:20 - uvicorn.error - INFO - Started server process [49355]
+2026-07-19 00:08:20 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:08:20 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:08:28 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:08:28 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:08:28 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:08:28 - uvicorn.error - INFO - Finished server process [49355]
+2026-07-19 00:08:29 - uvicorn.error - INFO - Started server process [49460]
+2026-07-19 00:08:29 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:08:29 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:08:52 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:08:52 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:08:52 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:08:52 - uvicorn.error - INFO - Finished server process [49460]
+2026-07-19 00:08:55 - uvicorn.error - INFO - Started server process [49644]
+2026-07-19 00:08:55 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:08:55 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:08:56 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:08:56 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:08:56 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:08:56 - uvicorn.error - INFO - Finished server process [49644]
+2026-07-19 00:11:19 - uvicorn.error - INFO - Started server process [51343]
+2026-07-19 00:11:19 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:11:19 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:14:50 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:14:51 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:14:51 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:14:51 - uvicorn.error - INFO - Finished server process [51343]
+2026-07-19 00:14:52 - uvicorn.error - INFO - Started server process [109830]
+2026-07-19 00:14:52 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:14:52 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:14:54 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:14:54 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:14:54 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:14:54 - uvicorn.error - INFO - Finished server process [109830]
+2026-07-19 00:14:58 - uvicorn.error - INFO - Started server process [109904]
+2026-07-19 00:14:58 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:14:58 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:15:04 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:15:04 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:15:04 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:15:04 - uvicorn.error - INFO - Finished server process [109904]
+2026-07-19 00:15:16 - uvicorn.error - INFO - Started server process [110114]
+2026-07-19 00:15:16 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:15:16 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:15:28 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:15:28 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:15:28 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:15:28 - uvicorn.error - INFO - Finished server process [110114]
+2026-07-19 00:15:29 - uvicorn.error - INFO - Started server process [110228]
+2026-07-19 00:15:29 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:15:29 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:15:45 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:15:45 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:15:45 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:15:45 - uvicorn.error - INFO - Finished server process [110228]
+2026-07-19 00:15:47 - uvicorn.error - INFO - Started server process [110394]
+2026-07-19 00:15:47 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:15:47 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 00:15:47 - uvicorn.error - INFO - Shutting down
+2026-07-19 00:15:47 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 00:15:47 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 00:15:47 - uvicorn.error - INFO - Finished server process [110394]
+2026-07-19 00:15:49 - uvicorn.error - INFO - Started server process [110433]
+2026-07-19 00:15:49 - uvicorn.error - INFO - Waiting for application startup.
+2026-07-19 00:15:49 - uvicorn.error - INFO - Application startup complete.

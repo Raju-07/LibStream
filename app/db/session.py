@@ -1,7 +1,7 @@
 from typing import AsyncGenerator
 from sqlalchemy.ext.asyncio import create_async_engine,AsyncSession, async_sessionmaker
 from app.core.config import settings
-
+import logging
 
 # Use async database URL
 DB_URL = settings.db_url
@@ -10,10 +10,11 @@ DB_URL = settings.db_url
 # Create async engine 
 engine = create_async_engine(
     DB_URL,
-    echo=True,
+    echo=settings.debug,  # "False" -> DB Logs will not show in console. For 'dev' env let it be 'True'
     future=True,
     pool_pre_ping=True
 )
+
 
 # Create async session factory
 AsyncSessionLocal = async_sessionmaker(

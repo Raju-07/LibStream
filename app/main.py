@@ -9,7 +9,11 @@ from contextlib import asynccontextmanager
 from app.schemas import UserResponse
 from app.admin_operations import router as admin_crud_route
 from app.db.logged_user_operation import router as user_router
-# from rough import router as test_router
+import logging
+from app.logging_config import setup_logging
+
+# Initalizing LOGGER_SETUP
+setup_logging(settings.debug)
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
@@ -26,6 +30,12 @@ app = FastAPI(lifespan=lifespan ,
     description="This platform is design to serve the Library System",
     version=settings.version)
 
+logger = logging.getLogger("app")
+
+@app.on_event("startup")
+async def startup_event():
+    logger.info("Application Statup")
+
 app.include_router(auth_router,prefix="/api")
 app.include_router(book_operation,prefix="/operation")
 app.include_router(admin_crud_route)
@@ -34,6 +44,7 @@ app.include_router(user_router)
 
 @app.get("/")
 async def homepage():
+    logger.info("Getting Route message \n")
     return {'code':'200','message':'Hello,Wolrd!'}
 
 @app.get("/api/protected-data")

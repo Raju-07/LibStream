@@ -1,0 +1,7 @@
+2026-07-18 23:43:23 - app.auth - WARNING - User already exists with that username
+2026-07-18 23:43:23 - app.auth - ERROR - <class 'fastapi.exceptions.HTTPException'>
+2026-07-18 23:44:54 - app.auth - WARNING - User already exists with that username
+2026-07-18 23:46:24 - app.auth - INFO - raju is trying to register in application
+2026-07-18 23:46:24 - app.auth - INFO - Checking if users username exists.
+2026-07-18 23:46:24 - app.auth - INFO - Checking if user's email exists.
+2026-07-18 23:46:24 - app.auth - WARNING - User already exists with that Email.
