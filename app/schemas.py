@@ -12,10 +12,12 @@ class UserRegister(Base):
     name: str = Field(...,
                       description="Full Name",
                       max_length=50,
+                      min_length=3,
                       title="Full Name",
                       )
     
     username: str = Field(...,
+                          min_length=3,
                           max_length=100,
                           description="username",
                           title="username"
@@ -25,6 +27,7 @@ class UserRegister(Base):
 
     password: str = Field(...,
                           max_length=50,
+                          min_length=8,
                           description="Password",
                           title="Password",
                           )
@@ -58,7 +61,7 @@ class AddBookRequest(Base):
     is_assigned: bool = False
 
 class UpdateBookRequest(Base):
-    name: Optional[str] = Field(default="No Change, Remove this Column")
+    name: Optional[str] = Field(default="No Change, Remove this Column",ge=3)
     author: Optional[str] = Field(default="No Change, Remove this Column")
     category: Optional[str] = Field(default="No Change, Remove this Column")
     location: Optional[str] = Field(default="No Change, Remove this Column")
