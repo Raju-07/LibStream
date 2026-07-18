@@ -1,7 +1,6 @@
 from pydantic import Field, EmailStr, BaseModel, ConfigDict
 from typing import Optional
 import uuid
-from datetime import datetime
 
 
 class Base(BaseModel):
@@ -29,6 +28,14 @@ class UserRegister(Base):
                           description="Password",
                           title="Password",
                           )
+    
+class AdminUserResponse(BaseModel):
+    id: uuid.UUID
+    name: str
+    username: str
+    email: str
+    is_active: bool
+    is_admin: bool
     
 class Books(Base):
     id: int = Field(...,description="Book id")
@@ -71,15 +78,15 @@ class ViewBookResponse(Base):
 
 # schema for requesting the book
 class BookRequest(Base):
-    book_name : str = Field(...,max_length=100,description="Book Name")
-    author: str = Field(default="Not Known",max_length=100,description="Book Description")
-    edition: Optional[str]
-    description: Optional[str]
+    name : str = Field(...,max_length=100,description="Book Name")
+    author: str = Field(default="",max_length=100,description="Book Description")
+    edition: Optional[str] = Field(default="")
+    description: Optional[str] = Field(default="")
 
 # schema for Responsing the Requested book
 class BookResponse(Base):
     id: int
-    book_name: str
+    name: str
     author: str
     edition: str
     description: str

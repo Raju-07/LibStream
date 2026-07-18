@@ -10,7 +10,10 @@ class Settings(BaseSettings):
     algorithm: str = Field(default=...,alias="ALGORITHM")
     token_expire_minutes: int = Field(default=...,alias="ACCESS_TOKEN_EXPIRE_MINUTES")
 
+    #Application
+    app_name: str = Field(default=...,alias="APP_NAME")
     version: str = Field(default=...,alias="VERSION")
+    debug: bool = Field(default=...,alias="DEBUG")
 
     model_config = SettingsConfigDict(
         env_file=".env",
