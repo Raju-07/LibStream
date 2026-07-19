@@ -8,7 +8,7 @@ from sqlalchemy import select,update,and_
 from app.db.session import get_async_db
 from app.api.dependencies import get_current_user,is_book_exists
 from app.models import BookAssignModal,UserModal,BooksModal,BookRequestModal
-from app.schemas import UserResponse,BookRequest
+from app.schemas import UserResponse,BookRequest,ViewBookResponse
 
 #router for all the operation (endpoints) in this file.
 router = APIRouter(prefix='/user',tags=["Users Operation"])
@@ -143,7 +143,7 @@ async def take_book(id: int = Depends(is_book_exists),current_user: UserResponse
             raise HTTPException(status_code=status.HTTP_404_NOT_FOUND,
                                 detail="Book isn't Found")
         if book.is_assigned:
-            raise HTTPException(status.HTTP_404_NOT_FOUND,"Book is already taken")
+            raise HTTPException(status.HTTP_404_NOT_FOUND,"Book is already taken (Not Available)")
         
         book.is_assigned = True
         await db.commit()
@@ -160,6 +160,9 @@ async def take_book(id: int = Depends(is_book_exists),current_user: UserResponse
             'message':"Book assigned to you",
             "book":book
         }
+    except HTTPException:
+        raise 
+
     except Exception as e:
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
                             f"Error occur while book assigning: {e}")
