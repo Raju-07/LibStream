@@ -9,3 +9,512 @@
 2026-07-19 08:44:34 - app.database - INFO - Database- closed.
 2026-07-19 08:44:39 - app.database - INFO - Database- initialized and verified.
 2026-07-19 08:47:48 - app.database - INFO - Database- closed.
+2026-07-19 09:23:03 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:24:26 - app.database - INFO - Database- closed.
+2026-07-19 09:24:29 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:24:30 - app.database - INFO - Database- closed.
+2026-07-19 09:24:34 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:24:38 - app.database - INFO - Database- closed.
+2026-07-19 09:24:40 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:25:23 - app.database - INFO - Database- closed.
+2026-07-19 09:25:25 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:26:05 - app.database - INFO - Database- closed.
+2026-07-19 09:26:07 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:26:10 - app.database - INFO - Database- closed.
+2026-07-19 09:26:13 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:26:37 - app.database - INFO - Database- closed.
+2026-07-19 09:26:39 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:26:42 - app.database - INFO - Database- closed.
+2026-07-19 09:26:44 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:27:02 - app.database - INFO - Database- closed.
+2026-07-19 09:27:05 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:27:13 - app.database - INFO - Database- closed.
+2026-07-19 09:27:29 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:27:48 - app.database - INFO - Database- closed.
+2026-07-19 09:27:50 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:27:50 - app.database - INFO - Database- closed.
+2026-07-19 09:27:52 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:27:54 - app.database - INFO - Database- closed.
+2026-07-19 09:27:57 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:00 - app.database - INFO - Database- closed.
+2026-07-19 09:28:02 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:03 - app.database - INFO - Database- closed.
+2026-07-19 09:28:05 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:05 - app.database - INFO - Database- closed.
+2026-07-19 09:28:07 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:07 - app.database - INFO - Database- closed.
+2026-07-19 09:28:09 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:09 - app.database - INFO - Database- closed.
+2026-07-19 09:28:11 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:13 - app.database - INFO - Database- closed.
+2026-07-19 09:28:14 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:23 - app.database - INFO - Database- closed.
+2026-07-19 09:28:25 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:26 - app.database - INFO - Database- closed.
+2026-07-19 09:28:27 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:33 - app.database - INFO - Database- closed.
+2026-07-19 09:28:35 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:35 - app.database - INFO - Database- closed.
+2026-07-19 09:28:37 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:39 - app.database - INFO - Database- closed.
+2026-07-19 09:28:41 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:44 - app.database - INFO - Database- closed.
+2026-07-19 09:28:46 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:50 - app.database - INFO - Database- closed.
+2026-07-19 09:28:53 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:55 - app.database - INFO - Database- closed.
+2026-07-19 09:28:58 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:28:58 - app.database - INFO - Database- closed.
+2026-07-19 09:29:00 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:29:01 - app.database - INFO - Database- closed.
+2026-07-19 09:29:02 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:29:10 - app.database - INFO - Database- closed.
+2026-07-19 09:29:12 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:29:26 - app.database - INFO - Database- closed.
+2026-07-19 09:29:29 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:29:29 - app.database - INFO - Database- closed.
+2026-07-19 09:29:32 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:29:50 - app.database - INFO - Database- closed.
+2026-07-19 09:29:52 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:29:56 - app.database - INFO - Database- closed.
+2026-07-19 09:29:59 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:30:08 - app.database - INFO - Database- closed.
+2026-07-19 09:30:10 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:30:13 - app.database - INFO - Database- closed.
+2026-07-19 09:30:15 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:30:15 - app.database - INFO - Database- closed.
+2026-07-19 09:30:16 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:30:18 - app.database - INFO - Database- closed.
+2026-07-19 09:30:20 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:31:35 - app.database - INFO - Database- closed.
+2026-07-19 09:31:37 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:31:37 - app.database - INFO - Database- closed.
+2026-07-19 09:31:39 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:31:59 - app.database - INFO - Database- closed.
+2026-07-19 09:32:07 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:33:27 - app.database - INFO - Database- closed.
+2026-07-19 09:33:29 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:33:33 - app.database - INFO - Database- closed.
+2026-07-19 09:33:37 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:33:37 - app.database - INFO - Database- closed.
+2026-07-19 09:33:39 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:34:08 - app.database - INFO - Database- closed.
+2026-07-19 09:34:25 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:34:25 - app.database - INFO - Database- closed.
+2026-07-19 09:34:27 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:34:30 - app.database - INFO - Database- closed.
+2026-07-19 09:34:32 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:34:32 - app.database - INFO - Database- closed.
+2026-07-19 09:34:34 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:36:39 - app.database - INFO - Database- closed.
+2026-07-19 09:36:48 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:37:05 - app.database - INFO - Database- closed.
+2026-07-19 09:37:07 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:38:46 - app.database - INFO - Database- closed.
+2026-07-19 09:38:50 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:41:03 - app.database - INFO - Database- closed.
+2026-07-19 09:41:05 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:41:12 - app.database - INFO - Database- closed.
+2026-07-19 09:41:14 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:44:20 - app.database - INFO - Database Session - Opened.
+2026-07-19 09:44:20 - app.database - INFO - Database Session - Closed.
+2026-07-19 09:44:26 - app.database - INFO - Database Session - Opened.
+2026-07-19 09:44:26 - app.database - INFO - Database Session - Closed.
+2026-07-19 09:44:28 - app.database - INFO - Database Session - Opened.
+2026-07-19 09:44:28 - app.database - INFO - Database Session - Closed.
+2026-07-19 09:44:38 - app.database - INFO - Database Session - Opened.
+2026-07-19 09:44:38 - app.database - INFO - Database Session - Closed.
+2026-07-19 09:45:24 - app.database - INFO - Database Session - Opened.
+2026-07-19 09:45:24 - app.database - INFO - Database Session - Closed.
+2026-07-19 09:45:33 - app.database - INFO - Database Session - Opened.
+2026-07-19 09:45:33 - app.database - INFO - Database Session - Closed.
+2026-07-19 09:46:49 - app.database - INFO - Database Session - Opened.
+2026-07-19 09:46:50 - app.database - INFO - Database Session - Closed.
+2026-07-19 09:47:11 - app.database - INFO - Database Session - Opened.
+2026-07-19 09:47:11 - app.database - INFO - Database Session - Closed.
+2026-07-19 09:48:09 - app.database - INFO - Database- closed.
+2026-07-19 09:48:30 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:49:05 - app.database - INFO - Database Session - Opened.
+2026-07-19 09:49:05 - app.database - INFO - Database Session - Closed.
+2026-07-19 09:49:46 - app.database - INFO - Database Session - Opened.
+2026-07-19 09:49:46 - app.database - INFO - Database Session - Closed.
+2026-07-19 09:51:19 - app.database - INFO - Database- closed.
+2026-07-19 09:51:22 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:51:27 - app.database - INFO - Database- closed.
+2026-07-19 09:51:50 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:51:50 - app.database - INFO - Database- closed.
+2026-07-19 09:51:53 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:51:54 - app.database - INFO - Database- closed.
+2026-07-19 09:52:00 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:52:32 - app.database - INFO - Database- closed.
+2026-07-19 09:52:35 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:52:44 - app.database - INFO - Database- closed.
+2026-07-19 09:53:09 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:53:13 - app.database - INFO - Database- closed.
+2026-07-19 09:53:15 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:53:16 - app.database - INFO - Database- closed.
+2026-07-19 09:53:18 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:53:58 - app.database - INFO - Database- closed.
+2026-07-19 09:54:29 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:54:29 - app.database - INFO - Database- closed.
+2026-07-19 09:54:31 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:55:48 - app.database - INFO - Database Session - Opened.
+2026-07-19 09:55:48 - app.database - INFO - Database Session - Closed.
+2026-07-19 09:55:59 - app.database - INFO - Database Session - Opened.
+2026-07-19 09:55:59 - app.database - INFO - Database Session - Closed.
+2026-07-19 09:57:05 - app.database - INFO - Database- closed.
+2026-07-19 09:57:09 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:58:10 - app.database - INFO - Database- closed.
+2026-07-19 09:58:13 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:58:20 - app.database - INFO - Database- closed.
+2026-07-19 09:58:23 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:58:24 - app.database - INFO - Database- closed.
+2026-07-19 09:58:26 - app.database - INFO - Database- initialized and verified.
+2026-07-19 09:58:27 - app.database - INFO - Database- closed.
+2026-07-19 09:58:29 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:03:26 - app.database - INFO - Database- closed.
+2026-07-19 10:03:28 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:04:38 - app.database - INFO - Database- closed.
+2026-07-19 10:04:41 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:04:45 - app.database - INFO - Database- closed.
+2026-07-19 10:04:47 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:04:54 - app.database - INFO - Database- closed.
+2026-07-19 10:05:00 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:05:05 - app.database - INFO - Database- closed.
+2026-07-19 10:05:07 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:05:07 - app.database - INFO - Database- closed.
+2026-07-19 10:05:08 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:05:46 - app.database - INFO - Database- closed.
+2026-07-19 10:05:49 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:05:49 - app.database - INFO - Database- closed.
+2026-07-19 10:05:51 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:05:53 - app.database - INFO - Database- closed.
+2026-07-19 10:05:55 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:08:24 - app.database - INFO - Database- closed.
+2026-07-19 10:08:33 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:08:33 - app.database - INFO - Database- closed.
+2026-07-19 10:08:35 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:08:53 - app.database - INFO - Database- closed.
+2026-07-19 10:08:55 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:08:55 - app.database - INFO - Database- closed.
+2026-07-19 10:08:57 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:09:31 - app.database - INFO - Database- closed.
+2026-07-19 10:09:34 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:09:34 - app.database - INFO - Database- closed.
+2026-07-19 10:09:37 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:09:46 - app.database - INFO - Database- closed.
+2026-07-19 10:09:48 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:11:57 - app.database - INFO - Database- closed.
+2026-07-19 10:11:59 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:13:31 - app.database - INFO - Database- closed.
+2026-07-19 10:13:32 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:13:50 - app.database - INFO - Database- closed.
+2026-07-19 10:13:52 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:14:26 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:14:26 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:17:12 - app.database - INFO - Database- closed.
+2026-07-19 10:17:15 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:17:15 - app.database - INFO - Database- closed.
+2026-07-19 10:17:17 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:17:19 - app.database - INFO - Database- closed.
+2026-07-19 10:17:21 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:17:34 - app.database - INFO - Database- closed.
+2026-07-19 10:17:35 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:17:36 - app.database - INFO - Database- closed.
+2026-07-19 10:17:38 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:17:43 - app.database - INFO - Database- closed.
+2026-07-19 10:17:45 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:17:46 - app.database - INFO - Database- closed.
+2026-07-19 10:17:48 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:18:21 - app.database - INFO - Database- closed.
+2026-07-19 10:18:22 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:20:25 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:20:25 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:20:36 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:20:36 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:20:48 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:20:48 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:25:47 - app.database - INFO - Database- closed.
+2026-07-19 10:26:02 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:26:28 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:26:28 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:26:41 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:26:41 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:27:24 - app.database - INFO - Database- closed.
+2026-07-19 10:27:29 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:27:35 - app.database - INFO - Database- closed.
+2026-07-19 10:27:37 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:28:01 - app.database - INFO - Database- closed.
+2026-07-19 10:28:03 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:28:08 - app.database - INFO - Database- closed.
+2026-07-19 10:28:09 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:28:15 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:28:15 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:28:20 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:28:20 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:28:43 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:28:43 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:29:34 - app.database - INFO - Database- closed.
+2026-07-19 10:29:35 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:29:38 - app.database - INFO - Database- closed.
+2026-07-19 10:29:40 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:29:50 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:29:50 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:33:06 - app.database - INFO - Database- closed.
+2026-07-19 10:33:09 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:33:09 - app.database - INFO - Database- closed.
+2026-07-19 10:33:11 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:33:11 - app.database - INFO - Database- closed.
+2026-07-19 10:33:13 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:33:39 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:33:39 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:34:27 - app.database - INFO - Database- closed.
+2026-07-19 10:34:36 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:34:45 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:34:45 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:35:25 - app.database - INFO - Database- closed.
+2026-07-19 10:35:30 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:35:33 - app.database - INFO - Database- closed.
+2026-07-19 10:35:35 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:35:36 - app.database - INFO - Database- closed.
+2026-07-19 10:35:37 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:36:40 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:36:40 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:38:15 - app.database - INFO - Database- closed.
+2026-07-19 10:38:18 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:38:19 - app.database - INFO - Database- closed.
+2026-07-19 10:38:22 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:38:22 - app.database - INFO - Database- closed.
+2026-07-19 10:38:24 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:40:43 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:40:43 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:40:57 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:40:58 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:42:10 - app.database - INFO - Database- closed.
+2026-07-19 10:42:13 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:42:13 - app.database - INFO - Database- closed.
+2026-07-19 10:42:15 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:42:21 - app.database - INFO - Database- closed.
+2026-07-19 10:42:23 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:43:55 - app.database - INFO - Database- closed.
+2026-07-19 10:44:04 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:44:14 - app.database - INFO - Database- closed.
+2026-07-19 10:44:17 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:44:19 - app.database - INFO - Database- closed.
+2026-07-19 10:44:20 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:44:21 - app.database - INFO - Database- closed.
+2026-07-19 10:44:22 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:45:23 - app.database - INFO - Database- closed.
+2026-07-19 10:45:40 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:45:54 - app.database - INFO - Database- closed.
+2026-07-19 10:45:57 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:46:05 - app.database - INFO - Database- closed.
+2026-07-19 10:46:08 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:46:26 - app.database - INFO - Database- closed.
+2026-07-19 10:46:28 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:47:23 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:47:23 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:47:56 - app.database - INFO - Database- closed.
+2026-07-19 10:47:58 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:48:09 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:48:09 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:48:43 - app.database - INFO - Database- closed.
+2026-07-19 10:48:45 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:49:37 - app.database - INFO - Database- closed.
+2026-07-19 10:50:15 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:51:00 - app.database - INFO - Database- closed.
+2026-07-19 10:51:02 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:51:02 - app.database - INFO - Database- closed.
+2026-07-19 10:51:04 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:51:11 - app.database - INFO - Database- closed.
+2026-07-19 10:51:12 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:51:52 - app.database - INFO - Database- closed.
+2026-07-19 10:51:54 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:51:58 - app.database - INFO - Database- closed.
+2026-07-19 10:52:00 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:52:08 - app.database - INFO - Database- closed.
+2026-07-19 10:52:12 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:52:22 - app.database - INFO - Database- closed.
+2026-07-19 10:52:23 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:52:46 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:52:46 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:57:20 - app.database - INFO - Database- closed.
+2026-07-19 10:57:40 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:58:02 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:58:02 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:58:24 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:58:24 - app.database - INFO - Database Session - Closed.
+2026-07-19 10:58:44 - app.database - INFO - Database- closed.
+2026-07-19 10:58:46 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:59:14 - app.database - INFO - Database- closed.
+2026-07-19 10:59:17 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:59:28 - app.database - INFO - Database- closed.
+2026-07-19 10:59:31 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:59:31 - app.database - INFO - Database- closed.
+2026-07-19 10:59:32 - app.database - INFO - Database- initialized and verified.
+2026-07-19 10:59:41 - app.database - INFO - Database Session - Opened.
+2026-07-19 10:59:41 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:02:21 - app.database - INFO - Database- closed.
+2026-07-19 11:02:25 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:02:38 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:02:38 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:02:53 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:02:53 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:02:58 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:02:58 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:03:34 - app.database - INFO - Database- closed.
+2026-07-19 11:03:36 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:03:39 - app.database - INFO - Database- closed.
+2026-07-19 11:03:41 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:03:42 - app.database - INFO - Database- closed.
+2026-07-19 11:03:45 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:03:48 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:03:48 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:03:58 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:03:58 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:04:06 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:04:06 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:04:18 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:04:18 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:06:21 - app.database - INFO - Database- closed.
+2026-07-19 11:08:57 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:09:01 - app.database - INFO - Database- closed.
+2026-07-19 11:09:02 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:09:16 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:09:16 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:09:30 - app.database - INFO - Database- closed.
+2026-07-19 11:09:34 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:09:34 - app.database - INFO - Database- closed.
+2026-07-19 11:09:35 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:12:26 - app.database - INFO - Database- closed.
+2026-07-19 11:12:28 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:12:30 - app.database - INFO - Database- closed.
+2026-07-19 11:12:32 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:12:34 - app.database - INFO - Database- closed.
+2026-07-19 11:12:36 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:12:37 - app.database - INFO - Database- closed.
+2026-07-19 11:12:40 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:12:40 - app.database - INFO - Database- closed.
+2026-07-19 11:12:47 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:12:49 - app.database - INFO - Database- closed.
+2026-07-19 11:12:51 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:12:53 - app.database - INFO - Database- closed.
+2026-07-19 11:12:55 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:12:56 - app.database - INFO - Database- closed.
+2026-07-19 11:12:58 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:02 - app.database - INFO - Database- closed.
+2026-07-19 11:13:04 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:05 - app.database - INFO - Database- closed.
+2026-07-19 11:13:07 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:08 - app.database - INFO - Database- closed.
+2026-07-19 11:13:10 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:12 - app.database - INFO - Database- closed.
+2026-07-19 11:13:16 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:16 - app.database - INFO - Database- closed.
+2026-07-19 11:13:18 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:18 - app.database - INFO - Database- closed.
+2026-07-19 11:13:21 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:23 - app.database - INFO - Database- closed.
+2026-07-19 11:13:26 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:27 - app.database - INFO - Database- closed.
+2026-07-19 11:13:30 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:30 - app.database - INFO - Database- closed.
+2026-07-19 11:13:32 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:35 - app.database - INFO - Database- closed.
+2026-07-19 11:13:39 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:41 - app.database - INFO - Database- closed.
+2026-07-19 11:13:43 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:44 - app.database - INFO - Database- closed.
+2026-07-19 11:13:47 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:47 - app.database - INFO - Database- closed.
+2026-07-19 11:13:50 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:50 - app.database - INFO - Database- closed.
+2026-07-19 11:13:52 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:13:53 - app.database - INFO - Database- closed.
+2026-07-19 11:13:56 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:17:31 - app.database - INFO - Database- closed.
+2026-07-19 11:17:33 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:17:36 - app.database - INFO - Database- closed.
+2026-07-19 11:17:38 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:18:05 - app.database - INFO - Database- closed.
+2026-07-19 11:18:07 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:23:18 - app.database - INFO - Database- closed.
+2026-07-19 11:23:20 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:28:13 - app.database - INFO - Database- closed.
+2026-07-19 11:28:15 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:28:19 - app.database - INFO - Database- closed.
+2026-07-19 11:28:21 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:28:28 - app.database - INFO - Database- closed.
+2026-07-19 11:28:29 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:28:31 - app.database - INFO - Database- closed.
+2026-07-19 11:28:32 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:30:06 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:30:06 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:30:19 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:30:19 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:32:49 - app.database - INFO - Database- closed.
+2026-07-19 11:32:51 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:33:17 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:33:17 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:37:11 - app.database - INFO - Database- closed.
+2026-07-19 11:37:13 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:37:55 - app.database - INFO - Database- closed.
+2026-07-19 11:43:14 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:43:15 - app.database - INFO - Database- closed.
+2026-07-19 11:43:17 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:44:14 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:44:14 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:44:35 - app.database - INFO - Database- closed.
+2026-07-19 11:44:36 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:44:40 - app.database - INFO - Database- closed.
+2026-07-19 11:44:42 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:44:42 - app.database - INFO - Database- closed.
+2026-07-19 11:44:44 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:44:44 - app.database - INFO - Database- closed.
+2026-07-19 11:44:45 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:44:51 - app.database - INFO - Database- closed.
+2026-07-19 11:44:52 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:44:52 - app.database - INFO - Database- closed.
+2026-07-19 11:44:54 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:45:09 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:45:09 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:45:17 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:45:17 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:46:29 - app.database - INFO - Database- closed.
+2026-07-19 11:49:57 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:50:42 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:50:42 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:51:36 - app.database - INFO - Database- closed.
+2026-07-19 11:51:49 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:51:53 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:51:53 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:53:30 - app.database - INFO - Database- closed.
+2026-07-19 11:54:25 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:54:25 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:54:25 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:54:33 - app.database - INFO - Database Session - Opened.
+2026-07-19 11:54:33 - app.database - INFO - Database Session - Closed.
+2026-07-19 11:59:44 - app.database - INFO - Database- closed.
+2026-07-19 11:59:45 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:59:49 - app.database - INFO - Database- closed.
+2026-07-19 11:59:51 - app.database - INFO - Database- initialized and verified.
+2026-07-19 11:59:59 - app.database - INFO - Database- closed.
+2026-07-19 12:00:01 - app.database - INFO - Database- initialized and verified.
+2026-07-19 12:02:13 - app.database - INFO - Database Session - Opened.
+2026-07-19 12:02:13 - app.database - INFO - Database Session - Closed.
+2026-07-19 12:03:00 - app.database - INFO - Database Session - Opened.
+2026-07-19 12:03:00 - app.database - INFO - Database Session - Closed.
+2026-07-19 12:03:58 - app.database - INFO - Database Session - Opened.
+2026-07-19 12:03:58 - app.database - INFO - Database Session - Closed.
+2026-07-19 12:04:33 - app.database - INFO - Database- closed.
+2026-07-19 12:04:57 - app.database - INFO - Database- initialized and verified.
+2026-07-19 12:05:03 - app.database - INFO - Database- closed.
+2026-07-19 12:05:05 - app.database - INFO - Database- initialized and verified.
+2026-07-19 12:05:24 - app.database - INFO - Database Session - Opened.
+2026-07-19 12:05:24 - app.database - INFO - Database Session - Closed.
+2026-07-19 12:07:59 - app.database - INFO - Database- closed.
+2026-07-19 12:08:03 - app.database - INFO - Database- initialized and verified.
+2026-07-19 12:08:05 - app.database - INFO - Database- closed.
+2026-07-19 12:08:06 - app.database - INFO - Database- initialized and verified.
+2026-07-19 12:09:38 - app.database - INFO - Database- closed.
+2026-07-19 12:09:40 - app.database - INFO - Database- initialized and verified.

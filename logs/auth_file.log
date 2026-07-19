@@ -13,3 +13,10 @@
 2026-07-19 08:34:57 - app.auth - INFO - Invalid username: string or password
 2026-07-19 08:35:19 - app.auth - INFO - User: string login successfully.
 2026-07-19 08:41:05 - app.auth - INFO - Invalid username: string or password
+2026-07-19 09:46:50 - app.auth - INFO - Invalid username: raju-07 or password
+2026-07-19 09:47:11 - app.auth - INFO - User: raju-07 login successfully.
+2026-07-19 09:49:05 - app.auth - INFO - Invalid username: admin123 or password
+2026-07-19 09:49:46 - app.auth - INFO - User: raju-07 login successfully.
+2026-07-19 09:55:48 - app.auth - INFO - User: raju-07 login successfully.
+2026-07-19 10:40:58 - app.auth - INFO - User: raju-07 login successfully.
+2026-07-19 12:02:13 - app.auth - INFO - User: raju-07 login successfully.
