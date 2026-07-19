@@ -11,10 +11,10 @@ from app.core.database import init_db,close_db
 from app.core.security import settings
 from app.db.auth import router as auth_router
 from app.api.dependencies import get_current_user
-from app.db.books_user_operation import router as book_operation
+from app.db.non_user_operation import router as book_operation
 from app.schemas import UserResponse
 from app.admin_operations import router as admin_crud_route
-from app.db.logged_user_operation import router as user_router
+from app.db.user_operation import router as user_router
 from app.logging_config import setup_logging
 
 # Initalizing LOGGER_SETUP

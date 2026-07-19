@@ -12,7 +12,7 @@ from app.api.dependencies import admin_required,is_book_exists
 from app.schemas import AddBookRequest,UpdateBookRequest,UserRegister,AdminUserResponse
 from app.db.session import get_async_db
 from app.models import BooksModal,UserModal,BookRequestModal,BookRequestStatus,BookAssignModal
-from app.db.books_user_operation import get_book_by_id
+from app.db.non_user_operation import get_book_by_id
 from app.db.auth import createuser
 
 #admin operation routes
