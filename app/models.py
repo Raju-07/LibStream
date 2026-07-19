@@ -39,23 +39,23 @@ class BookCategory(str,Enum):
     GENERAL = 'general'
     SELF_HELP = "self-help"
     FICTION = "fiction"
-    MYSTERY = "Mystery"
-    ROMANCE = "Romance"
-    SCIENCE_FICTION = "Science Fiction"
-    FANTASY = 'Fantasy'
-    HORROR = "Horror"
-    NON_FICTION = "Non Fiction"
-    BIOGRAPHY = "Biography"
-    HISTORY = "History"
-    SCIENCE = "Science"
-    YOUNG_ADULT = "Young Adult"
-    DYSTOPIAN = "Dystopian"
-    TECHNOLOGY = "Technology"
-    PSYCHOLOGY = "Psychology"
-    PRODUCTIVITY = "Productivity"
-    BUISNESS = "Buisness"
-    CLASSIC = "Classic"
-    PHILOSOPHY = "Philosophy"
+    MYSTERY = "mystery"
+    ROMANCE = "romance"
+    SCIENCE_FICTION = "science_fiction"
+    FANTASY = 'fantasy'
+    HORROR = "horror"
+    NON_FICTION = "non fiction"
+    BIOGRAPHY = "biography"
+    HISTORY = "history"
+    SCIENCE = "science"
+    YOUNG_ADULT = "young_adult"
+    DYSTOPIAN = "dystopian"
+    TECHNOLOGY = "technology"
+    PSYCHOLOGY = "psychology"
+    PRODUCTIVITY = "productivity"
+    BUSINESS = "business"
+    CLASSIC = "classic"
+    PHILOSOPHY = "philosophy"
 
     
 class BooksModal(Base):
@@ -63,9 +63,9 @@ class BooksModal(Base):
     __tablename__ = "books"
 
     id: Mapped[int] = mapped_column(Integer,primary_key=True,index=True,nullable=False,autoincrement=True)
-    name: Mapped[str] = mapped_column(String(50),nullable=False)
+    name: Mapped[str] = mapped_column(String(200),nullable=False)
     author: Mapped[str] = mapped_column(String(100),nullable=False)
-    category: Mapped[BookCategory] = mapped_column(SQlEnum(BookCategory),nullable=False)
+    category: Mapped[BookCategory] = mapped_column(SQlEnum(BookCategory,native_enum=False,values_callable= lambda x: [e.value for e in x]),nullable=False)
     location: Mapped[str] = mapped_column(String(50),nullable=False)
     is_assigned: Mapped[bool] = mapped_column(Boolean,default=False,nullable=False)
     added_at: Mapped[datetime] = mapped_column(DateTime(timezone=True),
@@ -76,7 +76,7 @@ class BooksModal(Base):
                                                     cascade='all,delete-orphan')
     
 
-    class config:
+    class Config:
         from_attributes = True
 
 class BookAssignModal(Base):
