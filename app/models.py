@@ -110,7 +110,7 @@ class BookAssignModal(Base):
 # Enum class for Book Request status 
 class BookRequestStatus(str,Enum):
     PENDING = "pending"
-    REJECT = "rejected" 
+    REJECTED = "rejected" 
     APPROVED = "approved"
     ORDERED = "ordered"
     COMPLETED = "completed"
@@ -128,8 +128,8 @@ class BookRequestModal(Base):
     description: Mapped[str] = mapped_column(String(255))
     request_by: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True),ForeignKey('users.id'),nullable=False)
 
-    status: Mapped[BookRequestStatus] = mapped_column(SQlEnum(BookRequestStatus,native_enum = False,values_callable = lambda x: [e.value for e in x]),
-                                        default=BookRequestStatus.PENDING.value,nullable=False)
+    status: Mapped[BookRequestStatus] = mapped_column(SQlEnum(BookRequestStatus,native_enum = False),
+                                        nullable=False,default=BookRequestStatus.PENDING)
     
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True),
                                     default=datetime.now(timezone.utc),
