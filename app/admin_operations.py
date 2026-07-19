@@ -4,14 +4,15 @@ from datetime import timezone,datetime
 #Fastapi & sqlalchemy
 from sqlalchemy import select,delete
 from sqlalchemy.orm import joinedload
+from sqlalchemy.exc import IntegrityError
 from sqlalchemy.ext.asyncio import AsyncSession
 from fastapi import Depends,APIRouter,HTTPException,status
 
 #app imports
 from app.api.dependencies import admin_required,is_book_exists
-from app.schemas import AddBookRequest,UpdateBookRequest,UserRegister,AdminUserResponse
+from app.schemas import AddBookRequest,UpdateBookRequest,UserRegister,AdminUserResponse,ViewBookResponse
 from app.db.session import get_async_db
-from app.models import BooksModal,UserModal,BookRequestModal,BookRequestStatus,BookAssignModal
+from app.models import BooksModal,UserModal,BookRequestModal,BookRequestStatus,BookAssignModal,BookCategory
 from app.db.non_user_operation import get_book_by_id
 from app.db.auth import createuser
 
@@ -187,19 +188,26 @@ async def not_returned_books(
             detail=f"Error while retrieving books: {e}"
         )
     
-@router.post('/add-book')
+@router.post('/add-book',response_model=ViewBookResponse)
 async def add_book(
     book:AddBookRequest,
     _ : None = Depends(admin_required),
-    db: AsyncSession = Depends(get_async_db)
+    db: AsyncSession = Depends(get_async_db),
     ):
     try:
         new_book = BooksModal(**book.model_dump())
         db.add(new_book)
         await db.commit()
         await db.refresh(new_book)
-    except:
+
+    except IntegrityError:
         await db.rollback()
+        raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Duplicate entry")
+    
+    except Exception as e:
+        await db.rollback()
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
+
 
     return new_book
 
