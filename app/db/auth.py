@@ -90,10 +90,12 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: AsyncSessi
     user = await db.execute(select(UserModal).where(UserModal.username == form_data.username))
     user = user.scalar_one_or_none()
     if not user.is_active:
+        logger.warning(f"Login Request - Banned User: {form_data.username}")
         raise HTTPException(status.HTTP_401_UNAUTHORIZED,
                             "You're bann from using this application. Contact Admin 'admin123@libstream.com' for more information")
     
     if not user or not verify_password(form_data.password, user.password):
+        logger.info(f"Invalid username: {form_data.username} or password")
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail="Invalid username or password")
     
@@ -104,4 +106,5 @@ async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: AsyncSessi
             'jti':str(uuid.uuid4()),
             'type':'access'
             })
+    logger.info(f"User: {form_data.username} login successfully.")
     return {'access_token':access_token,'token_type':'bearer'}

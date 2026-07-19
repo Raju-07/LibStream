@@ -3,6 +3,10 @@ from sqlalchemy.ext.asyncio import create_async_engine,AsyncSession, async_sessi
 from app.core.config import settings
 import logging
 
+#database logging logger
+logger = logging.getLogger("app.database")
+
+
 # Use async database URL
 DB_URL = settings.db_url
 # Example: "postgresql+asyncpg://user:password@localhost/dbname"
@@ -26,8 +30,10 @@ AsyncSessionLocal = async_sessionmaker(
 
 # Correct async generator with proper type hint
 async def get_async_db() -> AsyncGenerator[AsyncSession, None]:
+    logger.info("Database Session - Opened.")
     async with AsyncSessionLocal() as session:
         try:
             yield session
         finally:
+            logger.info("Database Session - Closed.")
             await session.close()

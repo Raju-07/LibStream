@@ -1,12 +1,16 @@
+#fastapi and sqlalchemy
 from fastapi import HTTPException,status,APIRouter,Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.exc import NoResultFound
 from sqlalchemy import select,update,and_
+
+#app imports
 from app.db.session import get_async_db
 from app.api.dependencies import get_current_user,is_book_exists
 from app.models import BookAssignModal,UserModal,BooksModal,BookRequestModal
 from app.schemas import UserResponse,BookRequest
 
+#router for all the operation (endpoints) in this file.
 router = APIRouter(prefix='/user',tags=["Users Operation"])
 
 # Retrieving the books i'm requested for

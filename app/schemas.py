@@ -1,6 +1,6 @@
-from pydantic import Field, EmailStr, BaseModel, ConfigDict
-from typing import Optional
 import uuid
+from typing import Optional
+from pydantic import Field, EmailStr, BaseModel, ConfigDict
 
 
 class Base(BaseModel):

@@ -5,3 +5,11 @@
 2026-07-18 23:46:24 - app.auth - INFO - Checking if users username exists.
 2026-07-18 23:46:24 - app.auth - INFO - Checking if user's email exists.
 2026-07-18 23:46:24 - app.auth - WARNING - User already exists with that Email.
+2026-07-19 08:33:49 - app.auth - INFO - Checking if users username exists.
+2026-07-19 08:33:49 - app.auth - INFO - Checking if user's email exists.
+2026-07-19 08:33:49 - app.auth - INFO - Hashing Password
+2026-07-19 08:33:49 - app.auth - INFO - Hashing Password complete.
+2026-07-19 08:33:49 - app.auth - INFO - New User Register Successfully.
+2026-07-19 08:34:57 - app.auth - INFO - Invalid username: string or password
+2026-07-19 08:35:19 - app.auth - INFO - User: string login successfully.
+2026-07-19 08:41:05 - app.auth - INFO - Invalid username: string or password

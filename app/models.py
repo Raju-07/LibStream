@@ -1,10 +1,11 @@
-from sqlalchemy import Integer,String,Date,UUID,DateTime,func,ForeignKey,Boolean,cast,extract
-from sqlalchemy.orm import mapped_column,Mapped,DeclarativeBase,relationship,column_property
 import uuid
 from datetime import datetime,timezone,timedelta
-from app.db.session import engine
-from sqlalchemy.types import Enum as SQlEnum 
 from enum import Enum  
+
+from sqlalchemy import Integer,String,Date,UUID,DateTime,func,ForeignKey,Boolean,cast,extract
+from sqlalchemy.orm import mapped_column,Mapped,DeclarativeBase,relationship,column_property
+from sqlalchemy.types import Enum as SQlEnum 
+
 
 class Base(DeclarativeBase):
     pass
