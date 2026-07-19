@@ -8,7 +8,7 @@ from sqlalchemy import select,update,and_
 from app.db.session import get_async_db
 from app.api.dependencies import get_current_user,is_book_exists
 from app.models import BookAssignModal,UserModal,BooksModal,BookRequestModal
-from app.schemas import UserResponse,BookRequest,ViewBookResponse
+from app.schemas import UserResponse,BookRequest
 
 #router for all the operation (endpoints) in this file.
 router = APIRouter(prefix='/user',tags=["Users Operation"])
@@ -20,10 +20,11 @@ async def my_requested_books(user: UserModal = Depends(get_current_user),db: Asy
         result = await db.execute(select(BookRequestModal).where(BookRequestModal.request_by == user.id))
         books = result.scalars().all()
         if not books:
-            raise HTTPException(
-                status.HTTP_404_NOT_FOUND,
-                "No Books Requested"
-            )
+            return {
+            'code':200,
+            'message':"You haven't requested any book yet.",
+            'books': books
+        }
         
         return {
             'code':200,
@@ -78,6 +79,7 @@ async def get_my_all_books(
         
     except HTTPException:
         raise  # Re-raise HTTP exceptions
+
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
@@ -96,6 +98,7 @@ async def request_new_book(new_book: BookRequest,user: UserModal = Depends(get_c
 
         return book
     except Exception as e:
+        await db.rollback()
         raise HTTPException(
             status.HTTP_500_INTERNAL_SERVER_ERROR,
             f"Error while Requesting new Book: {str(e)}"
