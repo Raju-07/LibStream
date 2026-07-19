@@ -32,7 +32,7 @@ class UserModal(Base):
         cascade="all,delete-orphan"
     )
 
-    class config:
+    class Config:
         from_attributes = True
 
 class BookCategory(str,Enum):
@@ -104,7 +104,7 @@ class BookAssignModal(Base):
     user: Mapped["UserModal"] = relationship(back_populates='assignments')
     book: Mapped["BooksModal"] = relationship(back_populates='assignments')
     
-    class config:
+    class Config:
         from_attributes = True 
 
 # Enum class for Book Request status 
@@ -137,6 +137,6 @@ class BookRequestModal(Base):
     
     requested_by_user: Mapped["UserModal"] = relationship(back_populates='book_requests')
     
-    class config:
+    class Config:
         from_attributes = True
     
