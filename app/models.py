@@ -35,7 +35,29 @@ class UserModal(Base):
     class config:
         from_attributes = True
 
+class BookCategory(str,Enum):
+    GENERAL = 'general'
+    SELF_HELP = "self-help"
+    FICTION = "fiction"
+    MYSTERY = "Mystery"
+    ROMANCE = "Romance"
+    SCIENCE_FICTION = "Science Fiction"
+    FANTASY = 'Fantasy'
+    HORROR = "Horror"
+    NON_FICTION = "Non Fiction"
+    BIOGRAPHY = "Biography"
+    HISTORY = "History"
+    SCIENCE = "Science"
+    YOUNG_ADULT = "Young Adult"
+    DYSTOPIAN = "Dystopian"
+    TECHNOLOGY = "Technology"
+    PSYCHOLOGY = "Psychology"
+    PRODUCTIVITY = "Productivity"
+    BUISNESS = "Buisness"
+    CLASSIC = "Classic"
+    PHILOSOPHY = "Philosophy"
 
+    
 class BooksModal(Base):
 
     __tablename__ = "books"
@@ -43,7 +65,7 @@ class BooksModal(Base):
     id: Mapped[int] = mapped_column(Integer,primary_key=True,index=True,nullable=False,autoincrement=True)
     name: Mapped[str] = mapped_column(String(50),nullable=False)
     author: Mapped[str] = mapped_column(String(100),nullable=False)
-    category: Mapped[str] = mapped_column(String(100),nullable=False,default='General')
+    category: Mapped[BookCategory] = mapped_column(SQlEnum(BookCategory),nullable=False)
     location: Mapped[str] = mapped_column(String(50),nullable=False)
     is_assigned: Mapped[bool] = mapped_column(Boolean,default=False,nullable=False)
     added_at: Mapped[datetime] = mapped_column(DateTime(timezone=True),
