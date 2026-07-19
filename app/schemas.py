@@ -1,7 +1,7 @@
 import uuid
 from typing import Optional
 from pydantic import Field, EmailStr, BaseModel, ConfigDict
-
+from app.models import BookCategory
 
 class Base(BaseModel):
     model_config = ConfigDict(from_attributes=True)
@@ -56,7 +56,7 @@ class UserResponse(Base):
 class AddBookRequest(Base):
     name: str
     author: str
-    category: str
+    category: BookCategory
     location: str
     is_assigned: bool = False
 
