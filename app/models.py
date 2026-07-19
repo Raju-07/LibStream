@@ -128,8 +128,8 @@ class BookRequestModal(Base):
     description: Mapped[str] = mapped_column(String(255))
     request_by: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True),ForeignKey('users.id'),nullable=False)
 
-    status: Mapped[BookRequestStatus] = mapped_column(SQlEnum(BookRequestStatus),
-                                        default=BookRequestStatus.PENDING,nullable=False)
+    status: Mapped[BookRequestStatus] = mapped_column(SQlEnum(BookRequestStatus,native_enum = False,values_callable = lambda x: [e.value for e in x]),
+                                        default=BookRequestStatus.PENDING.value,nullable=False)
     
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True),
                                     default=datetime.now(timezone.utc),

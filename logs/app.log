@@ -3205,3 +3205,7 @@ fastapi.exceptions.ResponseValidationError: 1 validation error:
 2026-07-19 12:09:40 - uvicorn.error - INFO - Started server process [259240]
 2026-07-19 12:09:40 - uvicorn.error - INFO - Waiting for application startup.
 2026-07-19 12:09:40 - uvicorn.error - INFO - Application startup complete.
+2026-07-19 12:10:49 - uvicorn.error - INFO - Shutting down
+2026-07-19 12:10:49 - uvicorn.error - INFO - Waiting for application shutdown.
+2026-07-19 12:10:49 - uvicorn.error - INFO - Application shutdown complete.
+2026-07-19 12:10:49 - uvicorn.error - INFO - Finished server process [259240]
