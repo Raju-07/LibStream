@@ -1,5 +1,4 @@
 #dependency imports
-import uuid
 from typing import Optional
 
 #Fastapi & slqalchemy 
@@ -9,8 +8,8 @@ from sqlalchemy import or_,and_,select,func,insert
 
 #app imports
 from app.db.session import get_async_db
-from app.models import BooksModal,UserModal,BookAssignModal
-from app.schemas import BookRequest,BookAssignRequest, UserResponse,ViewBookResponse
+from app.models import BooksModal
+from app.schemas import  ViewBookResponse
 from app.models import BookCategory
 
 
@@ -75,10 +74,11 @@ async def get_avail_books(db: AsyncSession = Depends(get_async_db)):
     count = query.scalar()
 
     if count == 0:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="There isn't any book available yet"
-        )
+        return {
+            'code':404,
+            'message': "There isn't any book available yet",
+                }
+
     
     books = await db.execute(select(BooksModal).where(and_(*condition)))
     return books.scalars().all()
