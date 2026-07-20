@@ -4,5 +4,5 @@ LibStreamenv
 rough.py
 rough.ipynb
 __pycache__
-async_db_op_kimi.html
-async_db_query.html
+logs
+.log

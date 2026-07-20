@@ -80,7 +80,7 @@ async def get_book_by_id(book_id:int, db: AsyncSession = Depends(get_async_db)):
 async def get_available_books(db: AsyncSession = Depends(get_async_db)):
     logger.info("Available books request received")
     condition = [BooksModal.is_assigned == False]
-    query = await db.execute(select(func.count(BooksModal.id)).where(and_(*condition)))
+    query = await db.execute(select(func.count(BooksModal.id)).where(*condition))
     count = query.scalar()
 
     if count == 0:
