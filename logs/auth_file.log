@@ -1,2 +1,16 @@
 2026-07-20 12:52:33 - app.auth - WARNING - Login failed for raju-07
 2026-07-20 12:52:45 - app.auth - WARNING - Login failed for raju-07
+2026-07-20 12:57:54 - app.auth - INFO - Registration request received for raju-07
+2026-07-20 12:57:55 - app.auth - INFO - Checking if users username exists.
+2026-07-20 12:57:55 - app.auth - INFO - Checking if user's email exists.
+2026-07-20 12:57:55 - app.auth - INFO - Hashing Password
+2026-07-20 12:57:55 - app.auth - INFO - Hashing Password complete.
+2026-07-20 12:57:56 - app.auth - INFO - User registered successfully: raju-07
+2026-07-20 12:59:19 - app.auth - INFO - User: raju-07 login successfully.
+2026-07-20 13:08:29 - app.auth - INFO - Registration request received for test123
+2026-07-20 13:08:29 - app.auth - INFO - Checking if users username exists.
+2026-07-20 13:08:29 - app.auth - INFO - Checking if user's email exists.
+2026-07-20 13:08:29 - app.auth - INFO - Hashing Password
+2026-07-20 13:08:29 - app.auth - INFO - Hashing Password complete.
+2026-07-20 13:08:30 - app.auth - INFO - User registered successfully: test123
+2026-07-20 13:34:40 - app.auth - INFO - User: raju-07 login successfully.
