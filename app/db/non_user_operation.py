@@ -55,7 +55,7 @@ async def search_books(
             detail=f"An error occurred while searching for books: {e}"
         )
 
-@router.get("/{book_id}",response_model=ViewBookResponse)
+@router.get("/{book_id}/details",response_model=ViewBookResponse)
 async def get_book_by_id(book_id:int, db: AsyncSession = Depends(get_async_db)):
     db_logger.info("Fetching book by id: %s", book_id)
     conditions = [BooksModal.id == book_id]
@@ -76,7 +76,7 @@ async def get_book_by_id(book_id:int, db: AsyncSession = Depends(get_async_db)):
     return books
 
 
-@router.get('/available')
+@router.get('/available',response_model=list[ViewBookResponse])
 async def get_available_books(db: AsyncSession = Depends(get_async_db)):
     logger.info("Available books request received")
     condition = [BooksModal.is_assigned == False]
