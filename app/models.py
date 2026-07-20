@@ -2,38 +2,13 @@ import uuid
 from datetime import datetime,timezone,timedelta
 from enum import Enum  
 
-from sqlalchemy import Integer,String,Date,UUID,DateTime,func,ForeignKey,Boolean,cast,extract
+from sqlalchemy import Integer,String,UUID,DateTime,func,ForeignKey,Boolean,text
 from sqlalchemy.orm import mapped_column,Mapped,DeclarativeBase,relationship,column_property
 from sqlalchemy.types import Enum as SQlEnum 
 
 
 class Base(DeclarativeBase):
     pass
-
-class UserModal(Base):
-    __tablename__= "users"
-
-    id: Mapped[uuid.UUID] = mapped_column(UUID,nullable=False,default= lambda: uuid.uuid4(),primary_key=True,index=True)
-    name: Mapped[str] = mapped_column(String(50),nullable=False)
-    username: Mapped[str] = mapped_column(String(70),nullable=False,unique=True)
-    email: Mapped[str] = mapped_column(String(100),unique=True,index=True,nullable=False)
-    password: Mapped[str] = mapped_column(String,nullable=False)
-    is_active: Mapped[bool] = mapped_column(Boolean,default=True,nullable=False)
-    is_admin: Mapped[bool] = mapped_column(Boolean,default=False,nullable=False)
-    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True),default=lambda: datetime.now(timezone.utc),server_default=func.current_timestamp())
-    
-    assignments: Mapped[list["BookAssignModal"]] = relationship(
-        back_populates="user",
-        cascade= "all,delete-orphan"
-        )
-    
-    book_requests: Mapped[list["BookRequestModal"]] = relationship(
-        back_populates='requested_by_user',
-        cascade="all,delete-orphan"
-    )
-
-    class Config:
-        from_attributes = True
 
 class BookCategory(str,Enum):
     GENERAL = 'general'
@@ -57,7 +32,38 @@ class BookCategory(str,Enum):
     CLASSIC = "classic"
     PHILOSOPHY = "philosophy"
 
+# Enum class for Book Request status 
+class BookRequestStatus(str,Enum):
+    PENDING = "pending"
+    REJECTED = "rejected" 
+    APPROVED = "approved"
+    ORDERED = "ordered"
+    COMPLETED = "completed"
+
+class UserModal(Base):
+    __tablename__= "users"
+
+    id: Mapped[uuid.UUID] = mapped_column(UUID,nullable=False,default= lambda: uuid.uuid4(),server_default=text("gen_random_uuid()"),primary_key=True,index=True)
+    name: Mapped[str] = mapped_column(String(50),nullable=False)
+    username: Mapped[str] = mapped_column(String(70),nullable=False,unique=True)
+    email: Mapped[str] = mapped_column(String(100),unique=True,index=True,nullable=False)
+    password: Mapped[str] = mapped_column(String,nullable=False)
+    is_active: Mapped[bool] = mapped_column(Boolean,default=True,nullable=False)
+    is_admin: Mapped[bool] = mapped_column(Boolean,default=False,nullable=False)
+    created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True),default=lambda: datetime.now(timezone.utc),server_default=func.current_timestamp())
     
+    assignments: Mapped[list["BookAssignModal"]] = relationship(
+        back_populates="user",
+        cascade= "all,delete-orphan"
+        )
+    
+    book_requests: Mapped[list["BookRequestModal"]] = relationship(
+        back_populates='requested_by_user',
+        cascade="all,delete-orphan")
+
+    class Config:
+        from_attributes = True
+
 class BooksModal(Base):
 
     __tablename__ = "books"
@@ -75,13 +81,12 @@ class BooksModal(Base):
     assignments: Mapped[list["BookAssignModal"]] = relationship(back_populates='book',
                                                     cascade='all,delete-orphan')
     
-
     class Config:
         from_attributes = True
 
 class BookAssignModal(Base):
 
-    __tablename__ = "book_assign"
+    __tablename__ = "book_loans"
 
     index: Mapped[int] = mapped_column(Integer,autoincrement=True,
                                        primary_key=True)
@@ -97,28 +102,18 @@ class BookAssignModal(Base):
         default=lambda: datetime.now(timezone.utc),
         server_default=func.current_timestamp())
     is_return: Mapped[bool] = mapped_column(Boolean,default=False,nullable=False)
-    
-    # days_left : Mapped[int] = column_property(
-        # cast(extract('epoch',expired_at - func.current_timestamp)/86400 ,Integer))
-    
+        
     user: Mapped["UserModal"] = relationship(back_populates='assignments')
     book: Mapped["BooksModal"] = relationship(back_populates='assignments')
     
     class Config:
         from_attributes = True 
 
-# Enum class for Book Request status 
-class BookRequestStatus(str,Enum):
-    PENDING = "pending"
-    REJECTED = "rejected" 
-    APPROVED = "approved"
-    ORDERED = "ordered"
-    COMPLETED = "completed"
 
 # New Book Request
 class BookRequestModal(Base):
 
-    __tablename__ = "book_requests"
+    __tablename__ = "library_book_requests"
 
     id: Mapped[int] = mapped_column(Integer,index=True,autoincrement=True,
                                     primary_key=True,nullable=False,)
@@ -127,10 +122,8 @@ class BookRequestModal(Base):
     edition: Mapped[str] = mapped_column(String(15))
     description: Mapped[str] = mapped_column(String(255))
     request_by: Mapped[uuid.UUID] = mapped_column(UUID(as_uuid=True),ForeignKey('users.id'),nullable=False)
-
     status: Mapped[BookRequestStatus] = mapped_column(SQlEnum(BookRequestStatus,native_enum = False),
                                         nullable=False,default=BookRequestStatus.PENDING)
-    
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone=True),
                                     default=datetime.now(timezone.utc),
                                     server_default=func.current_timestamp())

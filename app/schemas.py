@@ -61,10 +61,10 @@ class AddBookRequest(Base):
     is_assigned: bool = False
 
 class UpdateBookRequest(Base):
-    name: Optional[str] = Field(default="No Change, Remove this Column",ge=3)
-    author: Optional[str] = Field(default="No Change, Remove this Column")
-    category: Optional[str] = Field(default="No Change, Remove this Column")
-    location: Optional[str] = Field(default="No Change, Remove this Column")
+    name: Optional[str] = Field(default="")
+    author: Optional[str] = Field(default="")
+    category: Optional[str] = Field(default="")
+    location: Optional[str] = Field(default="")
 
 class BookAssignRequest(Base):
     user_id: uuid.UUID

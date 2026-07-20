@@ -79,49 +79,51 @@ DEBUG=False
 
 ## Endpoint guide
 
+> The routes below use the updated REST-style naming for LibStream.
+
 ### Authentication
 
-| Endpoint            | Method | Description                       | What you get                     | How to use                                                |
-| ------------------- | ------ | --------------------------------- | -------------------------------- | --------------------------------------------------------- |
-| /api/auth/register  | POST   | Register a new user account       | Returns the created user profile | Send name, username, email, and password in the JSON body |
-| /api/auth/login     | POST   | Log in with username and password | Returns an access token          | Use form-data with username and password                  |
-| /api/protected-data | GET    | Check that a JWT token is valid   | Returns a protected message      | Send the Bearer token in the Authorization header         |
+| Endpoint               | Method | Description                       | What you get                     | How to use                                                |
+| ---------------------- | ------ | --------------------------------- | -------------------------------- | --------------------------------------------------------- |
+| /api/auth/register     | POST   | Register a new user account       | Returns the created user profile | Send name, username, email, and password in the JSON body |
+| /api/auth/login        | POST   | Log in with username and password | Returns an access token          | Use form-data with username and password                  |
+| /api/auth/me           | GET    | Get the current authenticated user | Returns the signed-in user info | Send the Bearer token in the Authorization header        |
 
 ### Public book operations
 
-| Endpoint                           | Method | Description                             | What you get                          | How to use                                              |
-| ---------------------------------- | ------ | --------------------------------------- | ------------------------------------- | ------------------------------------------------------- |
-| /operation/books/search-by-name    | GET    | Search books by name                    | A list of matching books              | Pass bookname as a query parameter, optionally category |
-| /operation/books/search-by-id/{id} | GET    | Get a single book by ID                 | One book object                       | Replace {id} with the book ID                           |
-| /operation/books/available-books   | GET    | View books that are currently available | A list of unassigned books            | Call the endpoint without extra parameters              |
-| /                                  | GET    | Home page / welcome route               | A welcome message and available books | Requires authentication                                 |
+| Endpoint                  | Method | Description                             | What you get                          | How to use                                              |
+| ------------------------- | ------ | --------------------------------------- | ------------------------------------- | ------------------------------------------------------- |
+| /api/books/search         | GET    | Search books by name                    | A list of matching books              | Pass bookname as a query parameter, optionally category |
+| /api/books/{book_id}      | GET    | Get a single book by ID                 | One book object                       | Replace {book_id} with the book ID                      |
+| /api/books/available      | GET    | View books that are currently available | A list of unassigned books            | Call the endpoint without extra parameters              |
+| /                         | GET    | Home page / welcome route               | A welcome message and available books | Requires authentication                                 |
 
 ### User operations
 
-| Endpoint                 | Method | Description                                 | What you get                                    | How to use                                  |
-| ------------------------ | ------ | ------------------------------------------- | ----------------------------------------------- | ------------------------------------------- |
-| /user/my-requested-books | GET    | View books the current user has requested   | A list of requested books                       | Requires a valid Bearer token               |
-| /user/my-all-books       | GET    | View all books assigned to the current user | A list of borrowed books                        | Requires a valid Bearer token               |
-| /user/requrest-new-book  | POST   | Request a new book                          | Creates a new book request record               | Send name, author, edition, and description |
-| /user/book-return/{id}   | PUT    | Return a borrowed book                      | A success message after the return is processed | Replace {id} with the book ID               |
-| /user/take-book/{id}     | PATCH  | Borrow an available book                    | Marks the book as assigned to the current user  | Replace {id} with the book ID               |
+| Endpoint                              | Method | Description                                 | What you get                                    | How to use                                  |
+| ------------------------------------- | ------ | ------------------------------------------- | ----------------------------------------------- | ------------------------------------------- |
+| /api/users/me/book-requests           | GET    | View books the current user has requested   | A list of requested books                       | Requires a valid Bearer token               |
+| /api/users/me/book-requests           | POST   | Request a new book                          | Creates a new book request record               | Send name, author, edition, and description |
+| /api/users/me/loans                   | GET    | View all books assigned to the current user | A list of borrowed books                        | Requires a valid Bearer token               |
+| /api/users/me/loans/{book_id}/return  | PUT    | Return a borrowed book                      | A success message after the return is processed | Replace {book_id} with the book ID          |
+| /api/users/me/loans/{book_id}        | POST   | Borrow an available book                    | Marks the book as assigned to the current user  | Replace {book_id} with the book ID         |
 
 ### Admin operations
 
-| Endpoint                        | Method | Description                                            | What you get                               | How to use                                                         |
-| ------------------------------- | ------ | ------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------------ |
-| /admin/get-all-user             | GET    | List all users                                         | A list of users                            | Requires admin privileges                                          |
-| /admin/get-ban-user             | GET    | List banned users                                      | A list of inactive users                   | Requires admin privileges                                          |
-| /admin/all-requested-books      | GET    | List all pending book requests                         | A list of requests                         | Requires admin privileges                                          |
-| /admin/requested-books/{status} | GET    | Filter requested books by status                       | A list of requests for the provided status | Use values such as pending, approved, rejected, ordered, completed |
-| /admin/not-returned-books       | GET    | Find books that were not returned after their due date | A list of overdue assignments              | Requires admin privileges                                          |
-| /admin/add-book                 | POST   | Add a new book to the library                          | The created book object                    | Requires admin privileges                                          |
-| /admin/create-admin-user        | POST   | Create another admin user                              | A success message and admin user details   | Requires admin privileges                                          |
-| /admin/update-book/{id}         | PATCH  | Update book information                                | Updated book details                       | Requires admin privileges                                          |
-| /admin/ban-user/{username}      | PATCH  | Ban a user account                                     | A success message and user details         | Requires admin privileges                                          |
-| /admin/unban-user/{username}    | PATCH  | Unban a user account                                   | A success message and user details         | Requires admin privileges                                          |
-| /admin/delete-book/{id}         | DELETE | Delete a book                                          | A success message                          | Requires admin privileges                                          |
-| /admin/delete-user/{username}   | DELETE | Delete a user account                                  | A success message                          | Requires admin privileges                                          |
+| Endpoint                           | Method | Description                                            | What you get                               | How to use                                                         |
+| ---------------------------------- | ------ | ------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------------ |
+| /api/admin/users                   | GET    | List all users                                         | A list of users                            | Requires admin privileges                                          |
+| /api/admin/banned-users            | GET    | List banned users                                      | A list of inactive users                   | Requires admin privileges                                          |
+| /api/admin/book-requests           | GET    | List all pending book requests                         | A list of requests                         | Requires admin privileges                                          |
+| /api/admin/book-requests/{status}  | GET    | Filter requested books by status                       | A list of requests for the provided status | Use values such as pending, approved, rejected, ordered, completed |
+| /api/admin/overdue-loans           | GET    | Find books that were not returned after their due date | A list of overdue assignments              | Requires admin privileges                                          |
+| /api/admin/books                   | POST   | Add a new book to the library                          | The created book object                    | Requires admin privileges                                          |
+| /api/admin/users/admin            | POST   | Create another admin user                              | A success message and admin user details   | Requires admin privileges                                          |
+| /api/admin/books/{book_id}         | PATCH  | Update book information                                | Updated book details                       | Requires admin privileges                                          |
+| /api/admin/users/{username}/ban   | PATCH  | Ban a user account                                     | A success message and user details         | Requires admin privileges                                          |
+| /api/admin/users/{username}/unban | PATCH  | Unban a user account                                   | A success message and user details         | Requires admin privileges                                          |
+| /api/admin/books/{book_id}         | DELETE | Delete a book                                          | A success message                          | Requires admin privileges                                          |
+| /api/admin/users/{username}       | DELETE | Delete a user account                                  | A success message                          | Requires admin privileges                                          |
 
 ## Notes
 
