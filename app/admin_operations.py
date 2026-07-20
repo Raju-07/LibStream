@@ -367,14 +367,13 @@ async def activate_user(username: str, _ : None = Depends(admin_required),
     except Exception as e:
         await db.rollback()
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
-                            f"Error while Unbanning user: {e}")
+                            f"Error while Unbanning user")
     
 
 
 @router.delete("/books/{id}")
-async def delete_book(id:int = Depends(get_book_by_id),
-                            db: AsyncSession = Depends(get_async_db),
-                            _: None = Depends(admin_required)):
+async def delete_book(id:int,db: AsyncSession = Depends(get_async_db),
+                        _: None = Depends(admin_required)):
     
     try:
         logger.info("Admin deleting book: %s", id)
@@ -407,6 +406,7 @@ async def delete_user_account(username:str,db: AsyncSession = Depends(get_async_
         
         await db.delete(user)
         await db.commit()
+        logger.info(f"User {username} Account Deleted.")
         return {
             'code':200,
             'message': f"User {username} Account Deleted."
@@ -416,5 +416,5 @@ async def delete_user_account(username:str,db: AsyncSession = Depends(get_async_
 
     except Exception as e:
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
-                            f"Error while deleting user: {e}")
+                            f"Error while deleting user")
 

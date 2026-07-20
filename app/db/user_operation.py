@@ -5,6 +5,7 @@ from fastapi import HTTPException,status,APIRouter,Depends
 from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.exc import NoResultFound
 from sqlalchemy import select,update,and_
+from sqlalchemy.orm import joinedload
 
 #app imports
 from app.db.session import get_async_db
@@ -44,7 +45,7 @@ async def list_my_book_requests(user: UserModal = Depends(get_current_user),db: 
     except Exception as e:
         raise HTTPException(
             status.HTTP_500_INTERNAL_SERVER_ERROR,
-            f"Error while retrieving my requested books: {str(e)}"
+            f"Error while retrieving my requested books"
         )
     
 # Books that a user ever booked (assigned to user)
@@ -64,7 +65,9 @@ async def list_my_loans(
             )
         
         # books assigned to this user
-        stmt = select(BookAssignModal).where(BookAssignModal.user_id == user_id)
+        stmt = select(BookAssignModal).options(
+            joinedload(BookAssignModal.book),
+        ).where(BookAssignModal.user_id == user_id)
         results = await db.execute(stmt)
         my_books = results.scalars().all()
         
@@ -77,12 +80,28 @@ async def list_my_loans(
                 "books": []
             }
         
+        books = [
+            {
+                "No.": a.index,
+                "book": {
+                    "id": a.book.id,
+                    "name": a.book.name,
+                    "author": a.book.author,
+                    "category": a.book.category,
+                    "location": a.book.location,
+                    "returned": a.is_return,
+                    "expired_at": a.expired_at.strftime("%d-%m-%Y %H:%M:%S"),
+                }
+            }
+            for a in my_books
+        ]
+        
         logger.info("Returned %s loan(s) for user %s", len(my_books), user.id)
         return {
             "code": 200,
             "message": "Books retrieved successfully",
             "count": len(my_books),
-            "books": my_books
+            "books": books
         }
         
     except HTTPException:
@@ -91,7 +110,7 @@ async def list_my_loans(
     except Exception as e:
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail=f"Failed to retrieve books: {str(e)}"
+            detail=f"Failed to retrieve books."
         )
 
 # Request For new Book
@@ -111,7 +130,7 @@ async def create_book_request(new_book: BookRequest,user: UserModal = Depends(ge
         await db.rollback()
         raise HTTPException(
             status.HTTP_500_INTERNAL_SERVER_ERROR,
-            f"Error while Requesting new Book: {str(e)}"
+            f"Error while requesting new book"
         )
 
 # endpoint to return the book to libstream (Libraray)
@@ -144,7 +163,7 @@ async def return_book_loan(id:int = Depends(is_book_exists), db: AsyncSession = 
         await db.rollback()
         raise HTTPException(
             status.HTTP_500_INTERNAL_SERVER_ERROR,
-            f"Error while Returning Book {str(e)}"
+            f"Error while Returning Book"
         )
         
 # borrow any books that available
@@ -183,5 +202,5 @@ async def checkout_book(id: int = Depends(is_book_exists),current_user: UserResp
 
     except Exception as e:
         raise HTTPException(status.HTTP_500_INTERNAL_SERVER_ERROR,
-                            f"Error occur while book assigning: {e}")
+                            f"Error occur while book assigning")
 
