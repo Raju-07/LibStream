@@ -1,4 +1,5 @@
 #dependency imports
+import logging
 from datetime import timezone,datetime
 
 #Fastapi & sqlalchemy
@@ -14,14 +15,16 @@ from app.schemas import AddBookRequest,UpdateBookRequest,UserRegister,AdminUserR
 from app.db.session import get_async_db
 from app.models import BooksModal,UserModal,BookRequestModal,BookRequestStatus,BookAssignModal,BookCategory
 from app.db.non_user_operation import get_book_by_id
-from app.db.auth import createuser
+from app.db.auth import create_user
 
 #admin operation routes
 router = APIRouter(prefix='/admin',tags=["Admin Operations"])
+logger = logging.getLogger("app")
+db_logger = logging.getLogger("app.database")
 
 # retrieve all user
-@router.get("/get-all-user",status_code=status.HTTP_200_OK,response_model=list[AdminUserResponse])
-async def retrieve_all_user(_:None = Depends(admin_required),db: AsyncSession = Depends(get_async_db)):
+@router.get("/users",status_code=status.HTTP_200_OK,response_model=list[AdminUserResponse])
+async def list_users(_:None = Depends(admin_required),db: AsyncSession = Depends(get_async_db)):
     try:
         result = await db.execute(
             select(UserModal.name,UserModal.id,UserModal.username,
@@ -29,6 +32,7 @@ async def retrieve_all_user(_:None = Depends(admin_required),db: AsyncSession = 
         users = result.mappings().all()
 
         if not users:
+            logger.warning("No users found")
             raise HTTPException(status.HTTP_404_NOT_FOUND,
                                 "No users found")
 
@@ -44,8 +48,8 @@ async def retrieve_all_user(_:None = Depends(admin_required),db: AsyncSession = 
         )
     
 #retrieving banned user's
-@router.get("/get-ban-user",response_model=list[AdminUserResponse],status_code=status.HTTP_200_OK)
-async def get_ban_user(_:None = Depends(admin_required), db: AsyncSession = Depends(get_async_db)):
+@router.get("/banned-users",response_model=list[AdminUserResponse],status_code=status.HTTP_200_OK)
+async def list_banned_users(_:None = Depends(admin_required), db: AsyncSession = Depends(get_async_db)):
     try:
         result = await db.execute(
             select(UserModal.name,UserModal.id,UserModal.username,UserModal.email,UserModal.is_active,UserModal.is_admin).
@@ -72,8 +76,8 @@ async def get_ban_user(_:None = Depends(admin_required), db: AsyncSession = Depe
         )
     
 # Get all Requested books
-@router.get("/all-requested-books",status_code=status.HTTP_200_OK)
-async def get_all_requested_books(_:None=Depends(admin_required),db: AsyncSession = Depends(get_async_db)):
+@router.get("/book-requests",status_code=status.HTTP_200_OK)
+async def list_book_requests(_:None=Depends(admin_required),db: AsyncSession = Depends(get_async_db)):
     try:
         result = await db.execute(select(BookRequestModal.id,BookRequestModal.name,BookRequestModal.author,BookRequestModal.request_by,BookRequestModal.description,BookRequestModal.created_at,BookRequestModal.edition))
         books =result.mappings().all()
@@ -99,10 +103,10 @@ async def get_all_requested_books(_:None=Depends(admin_required),db: AsyncSessio
         )
     
 # Getting Requested Books by status
-@router.get("/requested-books/{status}")
-async def get_requested_books_by_status(book_status:BookRequestStatus,_:None = Depends(admin_required),db: AsyncSession = Depends(get_async_db)):
+@router.get("/book-requests/{status}")
+async def list_books_by_status(requests_status:BookRequestStatus,_:None = Depends(admin_required),db: AsyncSession = Depends(get_async_db)):
     try:
-        result = await db.execute(select(BookRequestModal).where(BookRequestModal.status == book_status))
+        result = await db.execute(select(BookRequestModal).where(BookRequestModal.status == requests_status))
         books = result.scalars().all()
 
         if not books:
@@ -127,8 +131,8 @@ async def get_requested_books_by_status(book_status:BookRequestStatus,_:None = D
         )
     
 # Getting all the books that has not been return after last date
-@router.get("/not-returned-books")
-async def not_returned_books(
+@router.get("/overdue-loans")
+async def list_overdue_loans(
     db: AsyncSession = Depends(get_async_db),
     _: None = Depends(admin_required)
 ):
@@ -188,13 +192,14 @@ async def not_returned_books(
             detail=f"Error while retrieving books: {e}"
         )
     
-@router.post('/add-book',response_model=ViewBookResponse)
-async def add_book(
+@router.post('/book',response_model=ViewBookResponse)
+async def create_book(
     book:AddBookRequest,
     _ : None = Depends(admin_required),
     db: AsyncSession = Depends(get_async_db),
     ):
     try:
+        logger.info("Admin creating book: %s", book.name)
         new_book = BooksModal(**book.model_dump())
         db.add(new_book)
         await db.commit()
@@ -209,13 +214,14 @@ async def add_book(
         raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail=str(e))
 
 
+    logger.info("Book created successfully: %s", new_book.id)
     return new_book
 
 #created new user (reusing existing function to create new user)
-@router.post("/create-admin-user",status_code=status.HTTP_201_CREATED)
-async def create_admin(user: UserRegister, db: AsyncSession = Depends(get_async_db), _ : None = Depends(admin_required)):
+@router.post("/users/admin",status_code=status.HTTP_201_CREATED)
+async def create_admin_user(user: UserRegister, db: AsyncSession = Depends(get_async_db), _ : None = Depends(admin_required)):
     try:
-        admin_user = await createuser(user, db)
+        admin_user = await create_user(user, db)
         admin_user.is_admin = True
         await db.commit()
         
@@ -236,12 +242,13 @@ async def create_admin(user: UserRegister, db: AsyncSession = Depends(get_async_
                             f"Error while creating admin user {e}")
 
 
-@router.patch("/update-book/{id}",status_code=status.HTTP_200_OK)
-async def update_book(book: UpdateBookRequest ,id: int = Depends(is_book_exists),
+@router.patch("/books/{id}",status_code=status.HTTP_200_OK)
+async def update_book_details(book: UpdateBookRequest ,id: int = Depends(is_book_exists),
                        db: AsyncSession = Depends(get_async_db),
                        _:None = Depends(admin_required)):
     # updating book
     try:
+        logger.info("Admin updating book: %s", id)
         result = await db.execute(select(BooksModal).where(BooksModal.id == id))
         exists_book = result.scalar_one_or_none()
 
@@ -266,14 +273,16 @@ async def update_book(book: UpdateBookRequest ,id: int = Depends(is_book_exists)
     
 
 # Endpoint to ban User's
-@router.patch("/ban-user/{username}")
-async def ban_user(username: str,_ : None = Depends(admin_required),
+@router.patch("/{username}/ban")
+async def deactivate_user(username: str,_ : None = Depends(admin_required),
                    db: AsyncSession = Depends(get_async_db)):
     try:
+        logger.info("Admin banning user: %s", username)
         user = await db.execute(select(UserModal).where(UserModal.username == username))
         user = user.scalar_one_or_none()
 
         if not user.is_active:
+            logger.info("User already banned: %s", username)
             return {
                 'code':200,
                 'message': "user is already Banned."
@@ -309,11 +318,12 @@ async def ban_user(username: str,_ : None = Depends(admin_required),
     
 # for unbanning the user
 
-@router.patch("/unban-user/{username}")
-async def unban_user(username: str, _ : None = Depends(admin_required),
+@router.patch("/{username}/unban")
+async def activate_user(username: str, _ : None = Depends(admin_required),
                      db: AsyncSession = Depends(get_async_db)):
     
     try:
+        logger.info("Admin unbanning user: %s", username)
         user = await db.execute(
             select(UserModal).where(UserModal.username == username)
         )
@@ -360,14 +370,16 @@ async def unban_user(username: str, _ : None = Depends(admin_required),
     
 
 
-@router.delete("/delete-book/{id}")
-async def delete_book_by_id(id:int = Depends(get_book_by_id),
+@router.delete("/books/{id}")
+async def delete_book(id:int = Depends(get_book_by_id),
                             db: AsyncSession = Depends(get_async_db),
                             _: None = Depends(admin_required)):
     
     try:
+        logger.info("Admin deleting book: %s", id)
         await db.execute(delete(BooksModal).where(BooksModal.id == id))
         await db.commit()
+        logger.info("Book deleted successfully: %s", id)
         return {'code':200,
                 'Message':"Book Deleted Successfully"}
     except Exception as e:
@@ -381,9 +393,10 @@ async def delete_book_by_id(id:int = Depends(get_book_by_id),
     
 
 # Deleting user
-@router.delete("/delete-user/{username}",status_code = status.HTTP_200_OK)
-async def delete_user(username:str,db: AsyncSession = Depends(get_async_db),_:None=Depends(admin_required)):
+@router.delete("/users/{username}",status_code = status.HTTP_200_OK)
+async def delete_user_account(username:str,db: AsyncSession = Depends(get_async_db),_:None=Depends(admin_required)):
     try:
+        logger.info("Admin deleting user: %s", username)
         result = await db.execute(select(UserModal).where(UserModal.username == username))
         user = result.scalar_one_or_none()
 

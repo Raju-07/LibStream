@@ -27,13 +27,13 @@ db_logger = logging.getLogger("app.database") #database logger
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    db_logger.debug("Database- initializing...")
+    db_logger.info("Database initialization started")
     await init_db()
-    db_logger.info("Database- initialized and verified.")
+    db_logger.info("Database initialized successfully")
     yield
-    db_logger.debug("Database- closing....")
+    db_logger.info("Database shutdown started")
     await close_db()
-    db_logger.info("Database- closed.")
+    db_logger.info("Database shutdown complete")
 
 app = FastAPI(lifespan=lifespan ,
     title="LibStream",
@@ -43,7 +43,7 @@ app = FastAPI(lifespan=lifespan ,
 
 @app.on_event("startup")
 async def startup_event():
-    logger.info("Application Statup")
+    logger.info("Application startup complete")
 
 app.include_router(auth_router,prefix="/api")
 app.include_router(book_operation,prefix="/operation")
@@ -52,8 +52,8 @@ app.include_router(user_router)
 # app.include_router(test_router,prefix = "/test")
 
 @app.get("/")
-async def homepage(db:AsyncSession = Depends(get_async_db),user: UserModal = Depends(get_current_user)):# Showing all Available Books 
-    logger.info("HomePage accessed showing Available books")
+async def homepage(db:AsyncSession = Depends(get_async_db),user: UserModal = Depends(get_current_user)):
+    logger.info("Homepage accessed")
     stmt = select(BooksModal).where(BooksModal.is_assigned == False)
     result = await db.execute(stmt)
     books = result.scalars().all()
@@ -63,7 +63,7 @@ async def homepage(db:AsyncSession = Depends(get_async_db),user: UserModal = Dep
         'books': books
         }
 
-@app.get("/api/protected-data")
+@app.get("/api/auth/me")
 async def get_secure_data(current_user: UserResponse = Depends(get_current_user)):
     return {'message':f"from {current_user.id} you've access to this data "}
 

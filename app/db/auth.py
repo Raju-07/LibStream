@@ -24,10 +24,10 @@ logger = logging.getLogger('app.auth')
 now = datetime.now(timezone.utc) # current datetime 
 
 @router.post("/register",response_model=UserResponse,status_code=status.HTTP_201_CREATED)
-async def createuser(
+async def create_user(
     user:UserRegister,
     db:AsyncSession = Depends(get_async_db)):
-    logger.debug(f"Register request received - username: {user.username}, email: {user.email}")
+    logger.info("Registration request received for %s", user.username)
 
     try:
         existing_user = (await db.execute(
@@ -68,7 +68,7 @@ async def createuser(
         db.add(new_user)
         await db.commit()
         await db.refresh(new_user)
-        logger.info("New User Register Successfully.")
+        logger.info("User registered successfully: %s", user.username)
         return new_user
     
     except HTTPException:
@@ -85,17 +85,17 @@ async def createuser(
                             f"Error while creating user: {e}")
 
 
-@router.post("/login/")
-async def login(form_data: OAuth2PasswordRequestForm = Depends(), db: AsyncSession = Depends(get_async_db)):
+@router.post("/login")
+async def login_user(form_data: OAuth2PasswordRequestForm = Depends(), db: AsyncSession = Depends(get_async_db)):
     user = await db.execute(select(UserModal).where(UserModal.username == form_data.username))
     user = user.scalar_one_or_none()
     if not user.is_active:
-        logger.warning(f"Login Request - Banned User: {form_data.username}")
+        logger.warning("Login rejected for banned user: %s", form_data.username)
         raise HTTPException(status.HTTP_401_UNAUTHORIZED,
                             "You're bann from using this application. Contact Admin 'admin123@libstream.com' for more information")
     
     if not user or not verify_password(form_data.password, user.password):
-        logger.info(f"Invalid username: {form_data.username} or password")
+        logger.warning("Login failed for %s", form_data.username)
         raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED,
                             detail="Invalid username or password")
     

@@ -30,10 +30,10 @@ AsyncSessionLocal = async_sessionmaker(
 
 # Correct async generator with proper type hint
 async def get_async_db() -> AsyncGenerator[AsyncSession, None]:
-    logger.info("Database Session - Opened.")
+    logger.info("Database session opened")
     async with AsyncSessionLocal() as session:
         try:
             yield session
         finally:
-            logger.info("Database Session - Closed.")
+            logger.info("Database session closed")
             await session.close()
