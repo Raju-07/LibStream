@@ -2,7 +2,7 @@ import uuid
 from datetime import datetime,timezone,timedelta
 from enum import Enum  
 
-from sqlalchemy import Integer,String,Date,UUID,DateTime,func,ForeignKey,Boolean,cast,extract, text
+from sqlalchemy import Integer,String,UUID,DateTime,func,ForeignKey,Boolean,text
 from sqlalchemy.orm import mapped_column,Mapped,DeclarativeBase,relationship,column_property
 from sqlalchemy.types import Enum as SQlEnum 
 
