@@ -254,6 +254,7 @@ async def update_book_details(book: UpdateBookRequest ,id: int = Depends(is_book
 
         #unpacking all the data to it's column
         data_update = book.model_dump(exclude_unset=True)
+        data_update = {k:v for k,v in data_update.items() if v != ''} # filter data with values - ''
         for key, values in data_update.items():
             setattr(exists_book,key,values)
 
