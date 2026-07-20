@@ -74,7 +74,7 @@ class ViewBookResponse(Base):
     id: int
     name: str
     author: str
-    category: str
+    category: BookCategory
     is_assigned: bool
     location: str
 
